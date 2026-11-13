@@ -1,0 +1,219 @@
+{
+  "note": "Wording swaps for the STAFDA / Halvern build, applied to core/base.html, classic.js and modern.js. Specific phrases first, then the brand and submitter renames.",
+  "swaps": [
+    [
+      "RIDGELINE ELECTRICAL — WARRANTY CLAIMS PORTAL",
+      "WARRANTY CLAIMS SOLUTION"
+    ],
+    [
+      "df('Watts / Size',prod.awg)+df('Ambient Rating',prod.tempRating)",
+      "df('Size',prod.awg)+df('Power',prod.tempRating)+df('Rating',prod.voltageRating)"
+    ],
+    [
+      "Add a nameplate photo: catalog number and date code",
+      "Add a photo of the tool label: catalog number and date code"
+    ],
+    [
+      "placeholder=\"e.g. Dead at full output since Monday. 32 ft mounting, conditioned warehouse.\"",
+      "placeholder=\"e.g. Stops under load and won’t restart. Tried two charged packs.\""
+    ],
+    [
+      "<label>Fixture</label><select id=\"claimProduct\"",
+      "<label>Tool or product</label><select id=\"claimProduct\""
+    ],
+    [
+      "Choose the fixture",
+      "Choose the product"
+    ],
+    [
+      "This fixture can’t be claimed",
+      "This product can’t be claimed"
+    ],
+    [
+      "Expired fixtures may still qualify for a goodwill credit.",
+      "Expired tools may still qualify for a goodwill credit."
+    ],
+    [
+      "No claims on file. Your fixtures are behaving.",
+      "No claims on file. Your tools are holding up."
+    ],
+    [
+      "var claimId='WC-'+String(1049+newClaims.length);",
+      "var claimId='WC-'+String(2049+newClaims.length);"
+    ],
+    [
+      "Register a job",
+      "Register tools"
+    ],
+    [
+      "Registered jobs",
+      "Registered tools"
+    ],
+    [
+      "Step 2 — Site & Installation Details",
+      "Step 2 — End user and in-service details"
+    ],
+    [
+      "End Customer / Company Name",
+      "End user (contractor)"
+    ],
+    [
+      "placeholder=\"e.g. Memorial Regional Hospital\"",
+      "placeholder=\"e.g. Marquand Concrete Cutting\""
+    ],
+    [
+      "<label>Project Name / Phase ID</label>",
+      "<label>Crew or job</label>"
+    ],
+    [
+      "placeholder=\"e.g. Corliss Park DC — Phase 2\"",
+      "placeholder=\"e.g. Marquand — coring crew 2\""
+    ],
+    [
+      "placeholder=\"e.g. 3501 Johnson St, Hollywood, FL 33021\"",
+      "placeholder=\"e.g. jobsite or yard address\""
+    ],
+    [
+      "<label>Installation Environment <span",
+      "<label>Where it’s used <span"
+    ],
+    [
+      "Dry Location — Indoor (warehouse, office, school)",
+      "Interior — framing, drywall, MEP"
+    ],
+    [
+      "Wet Location — Outdoor pole / wall mount",
+      "Exterior / wet — sitework, wet cutting"
+    ],
+    [
+      "Harsh / Industrial — Cold storage, corrosive or high heat",
+      "Heavy duty — concrete drilling, coring, demo"
+    ],
+    [
+      "Wet Location (Outdoor)",
+      "Exterior / wet"
+    ],
+    [
+      "'Wet (Outdoor)'",
+      "'Exterior / wet'"
+    ],
+    [
+      "WET / OUTDOOR",
+      "EXTERIOR / WET"
+    ],
+    [
+      "<label>Installation Date <span",
+      "<label>In-service date <span"
+    ],
+    [
+      "<label>Quantity Installed (",
+      "<label>Quantity ("
+    ],
+    [
+      "Enter installation date to see warranty period",
+      "Enter the in-service date to see the coverage"
+    ],
+    [
+      "'<div class=\"ep-duration\">'+prod.warrantyYears+'-year coverage from installation date</div></div>';",
+      "'<div class=\"ep-duration\">'+(prod.registeredYears||prod.warrantyYears)+'-year coverage from the in-service date once registered</div></div>';"
+    ],
+    [
+      "' · '+prod.warrantyYears+'-year warranty</div></div></div></div>';",
+      "' · '+(prod.registeredYears||prod.warrantyYears)+'-year warranty once registered</div></div></div></div>';"
+    ],
+    [
+      "var years = prod ? prod.warrantyYears : 10;",
+      "var years = prod ? (prod.registeredYears||prod.warrantyYears) : 3;"
+    ],
+    [
+      "var warrantyYears = prod ? prod.warrantyYears : 10;",
+      "var warrantyYears = prod ? (prod.registeredYears||prod.warrantyYears) : 3;"
+    ],
+    [
+      "PDF invoice from authorized distributor",
+      "Invoice or receipt (PDF)"
+    ],
+    [
+      "Installation Photos</span>Fixture and nameplate photos (optional)",
+      "Tool label photo</span>Catalog number and date code (optional)"
+    ],
+    [
+      "<label>Installation Notes</label>",
+      "<label>Notes</label>"
+    ],
+    [
+      "placeholder=\"Contractor details, conduit type, pull distances, any relevant compliance notes...\"",
+      "placeholder=\"e.g. Assigned to coring crew 2. Serials 11801 to 11812.\""
+    ],
+    [
+      "<div class=\"cc-title\">Installation Compliance</div>",
+      "<div class=\"cc-title\">Use and care</div>"
+    ],
+    [
+      "I certify that all fixtures were installed in compliance with the current <strong>National Electrical Code (NEC)</strong> and applicable local codes.",
+      "I confirm the operators are trained and, for powder-actuated tools, hold a <strong>valid operator card</strong>."
+    ],
+    [
+      "I affirm that the fixtures were installed per the manufacturer\\'s <strong>installation instructions</strong> and <strong>rated ambient / hours limits</strong> guidelines.",
+      "I confirm the tools will be used and serviced per the <strong>operator\\'s manual</strong>, with <strong>Halvern batteries, loads and accessories</strong>."
+    ],
+    [
+      "✓ NEC</span>",
+      "✓ Trained operators</span>"
+    ],
+    [
+      "✓ Install Spec</span>",
+      "✓ Manual and OEM parts</span>"
+    ],
+    [
+      "df('NEC Compliance','<span style=\"color:var(--success)\">✓ Certified</span>')",
+      "df('Use and care','<span style=\"color:var(--success)\">✓ Confirmed</span>')"
+    ],
+    [
+      " NEC and installation-instruction compliance certified by registrant.",
+      " Operator training and use-and-care confirmed by registrant."
+    ],
+    [
+      "NEC + installation-instruction compliance certified ✓",
+      "Operator training and use-and-care confirmed ✓"
+    ],
+    [
+      "df('Install Environment'",
+      "df('Used in'"
+    ],
+    [
+      "df('Install Date'",
+      "df('In service'"
+    ],
+    [
+      "Register Warranty</button>",
+      "Register tools</button>"
+    ],
+    [
+      "fixtures and file warranty claims.",
+      "products and file warranty claims."
+    ],
+    [
+      "'Fixture label photo'",
+      "'Tool label photo'"
+    ],
+    [
+      "Tessford Lighting Co.",
+      "Halvern Tool & Fastener Co."
+    ],
+    [
+      "Tessford",
+      "Halvern"
+    ]
+  ],
+  "renames": [
+    [
+      "Contractor",
+      "Distributor"
+    ],
+    [
+      "contractor",
+      "distributor"
+    ]
+  ]
+}

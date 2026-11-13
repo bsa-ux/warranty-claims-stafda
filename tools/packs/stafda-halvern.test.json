@@ -1,0 +1,18 @@
+{
+  "body_font": "HvText",
+  "claimant_header_rgb": "rgb(30, 35, 40)",
+  "admin_title": "Halvern Warranty Desk · Admin",
+  "live_claim": {"order": "ORD-2026-3101", "sku": "HV-HD20-K2", "id": "WC-2049", "desc": "Stops under load and won't restart."},
+  "screens": {"c09-claim-ra": "WC-2045", "c10-claim-approved": "WC-2041", "c11-claim-rejected": "WC-2044", "c12-claim-info": "WC-2048"},
+  "admin_claim": "WC-2042",
+  "lookup_first": "HV-HD20",
+  "lookup_queries": [["hv hd20 k2", "HV-HD20-K2"], ["HVBP2080", "HV-BP20-80"], ["wedge anchor", "HV-WA12-414"]],
+  "lookup_exact": "HV-DB12-SEG",
+  "expired": {"account": 0, "order": "ORD-2021-3103", "item": 1},
+  "voided": {"account": 2, "order": "ORD-2026-3301", "item": 1},
+  "directory": ["Corridan Construction Supply", "Sandvale Fastener & Tool", "Tallis Jobsite Supply", "Penhallow Specialty Supply"],
+  "toggle_claim": "WC-2045",
+  "history_search": "2045",
+  "banned": ["Riverside", "Kestrelline", "Brightforge", "Harbor Point", "Ridgeline", "Codup", "Portal", "Oops", "Tessford", "Vossberg",
+             "Stavely", "Ironmere", "Pellow", "Tollgate", "fixture", "Fixture", "nameplate", "TF-", "Erie", "LED", "lighting", "NEC", "Contractor account", "Watts"]
+}

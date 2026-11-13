@@ -1,0 +1,3118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#2B221C">
+<title>Tessford Warranty Desk</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<style>
+/* ========================================================================
+   RIDGELINE ELECTRICAL — WARRANTY CLAIMS PORTAL
+   Material Design inspired — elevation, depth, proper type scale
+   ======================================================================== */
+
+:root {
+  --primary: #2563A8;
+  --primary-dark: #1A4B80;
+  --primary-light: #EBF2FA;
+  --primary-surface: #F5F8FC;
+  --on-primary: #ffffff;
+  --surface: #ffffff;
+  --surface-dim: #F5F3F0;
+  --surface-container: #FAFAF8;
+  --background: #F0EDEA;
+  --outline: #C8C4BF;
+  --outline-variant: #E5E2DE;
+  --on-surface: #1A1A1A;
+  --on-surface-variant: #4A4641;
+  --on-surface-muted: #7A756F;
+  --error: #C0392B;
+  --error-bg: #FDF0EF;
+  --success: #1E8449;
+  --success-bg: #E8F6ED;
+  --warning: #D35400;
+  --warning-bg: #FDF2E9;
+  --info: #2563A8;
+  --info-bg: #EBF2FA;
+  --purple: #7D3C98;
+  --purple-bg: #F4ECF7;
+  --font: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "SF Mono", "Cascadia Code", "Roboto Mono", "Consolas", monospace;
+  --shadow-1: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-2: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-3: 0 4px 16px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --header-height: 56px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--on-surface);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* ===== LOGIN SCREEN ===== */
+#loginScreen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--background);
+}
+.login-hero {
+  background: linear-gradient(145deg, #1A4B80 0%, #2563A8 60%, #3B7EC9 100%);
+  color: var(--on-primary);
+  padding: 52px 24px 40px;
+  text-align: center;
+  position: relative;
+}
+.login-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: var(--background);
+  border-radius: 24px 24px 0 0;
+}
+.login-hero .logo-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+}
+.login-hero .logo-icon svg { width: 30px; height: 30px; }
+.login-hero h1 {
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.login-hero .tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.login-body {
+  flex: 1;
+  padding: 28px 20px 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-form {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  padding: 28px 24px;
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid var(--outline-variant);
+}
+.login-form .lf-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+.login-form .lf-group {
+  margin-bottom: 18px;
+}
+.login-form .lf-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--on-surface-variant);
+  margin-bottom: 6px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.login-form .lf-group select {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 14px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--on-surface);
+  cursor: pointer;
+  transition: border-color 0.2s;
+  font-family: var(--font);
+}
+.login-form .lf-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,168,0.08);
+}
+.login-form .lf-account-info {
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+  display: none;
+  border-left: 3px solid var(--primary);
+}
+.login-form .lf-account-info.visible { display: block; }
+.login-form .lf-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--on-primary);
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.15s, transform 0.1s;
+  letter-spacing: 0.01em;
+}
+.login-form .lf-btn:active { background: var(--primary-dark); transform: scale(0.98); }
+.login-form .lf-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.login-footer {
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--on-surface-muted);
+}
+
+/* ===== APP SHELL ===== */
+#appShell {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  background: var(--background);
+}
+.app-header {
+  background: var(--surface);
+  color: var(--on-surface);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--outline-variant);
+  z-index: 10;
+}
+.app-header .ah-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.app-header .ah-brand {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--primary-dark);
+}
+.app-header .ah-user {
+  font-size: 12px;
+  color: var(--on-surface-muted);
+}
+.app-header .ah-signout {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  background: var(--surface-dim);
+  border: 1px solid var(--outline-variant);
+  padding: 6px 16px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.app-header .ah-signout:active { background: var(--outline-variant); }
+
+/* TOP TABS (manufacturer) */
+.tab-bar-top {
+  background: var(--surface);
+  display: flex;
+  flex-shrink: 0;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--outline-variant);
+  z-index: 9;
+}
+.tab-bar-top button {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--on-surface-muted);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 4px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s;
+  margin-bottom: -1px;
+}
+.tab-bar-top button.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 600;
+}
+
+/* BOTTOM NAV (distributor) */
+.nav-bottom {
+  background: var(--surface);
+  border-top: 1px solid var(--outline-variant);
+  display: flex;
+  flex-shrink: 0;
+  padding: 4px 0 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  box-shadow: 0 -1px 4px rgba(0,0,0,0.06);
+  z-index: 10;
+}
+.nav-bottom button {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--on-surface-muted);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 4px 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-bottom button svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.nav-bottom button.active {
+  color: var(--primary);
+}
+
+/* MAIN CONTENT */
+#mainContent {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* SECTION LABEL — enterprise header bar */
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--on-surface-muted);
+  padding: 18px 20px 8px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.section-label::before {
+  display: none;
+}
+
+/* ===== STAT TILES ===== */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 12px 20px 16px;
+}
+.stat-tile {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  padding: 16px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.stat-tile .st-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.stat-tile .st-label {
+  font-size: 11px;
+  color: var(--on-surface-muted);
+  margin-top: 4px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.stat-tile .st-accent {
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+  width: 32px;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+}
+
+/* ===== TABLE LIST ===== */
+.list-container {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  margin: 0 20px 12px;
+  overflow: hidden;
+}
+.list-container .list-header {
+  display: flex;
+  background: var(--surface-dim);
+  color: var(--on-surface-muted);
+  padding: 9px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  gap: 10px;
+  border-bottom: 1px solid var(--outline-variant);
+}
+.list-container .list-header .lh-main { flex: 1; }
+.list-container .list-header .lh-status { width: 80px; text-align: right; }
+.list-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--outline-variant);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  gap: 10px;
+  transition: background 0.1s;
+}
+.list-row:last-child { border-bottom: none; }
+.list-row:active { background: var(--surface-dim); }
+.list-row:hover { background: var(--primary-light); }
+.list-row .lr-main { flex: 1; min-width: 0; }
+.list-row .lr-id {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.list-row .lr-product {
+  font-size: 13px;
+  color: var(--on-surface);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+.list-row .lr-date {
+  font-size: 11px;
+  color: var(--on-surface-muted);
+  margin-top: 3px;
+}
+.list-row .lr-right {
+  text-align: right;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+/* STATUS + SEVERITY */
+.status-chip {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.status-pending { background: var(--warning-bg); color: var(--warning); }
+.status-under_review { background: var(--info-bg); color: var(--info); }
+.status-sample_requested { background: var(--purple-bg); color: var(--purple); }
+.status-info_requested { background: var(--warning-bg); color: var(--warning); }
+.status-approved { background: var(--success-bg); color: var(--success); }
+.status-rejected { background: var(--error-bg); color: var(--error); }
+
+.severity-text {
+  font-size: 11px;
+  color: var(--on-surface-muted);
+  margin-top: 4px;
+}
+.sev-critical { color: var(--error); font-weight: 600; }
+.sev-high { color: var(--warning); font-weight: 500; }
+
+/* CERT BADGES */
+.cert-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+.cert-badge {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+/* FILTER CHIPS — tab-style */
+.filter-bar {
+  display: flex;
+  gap: 0;
+  padding: 0 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 1px solid var(--outline-variant);
+  background: var(--surface);
+}
+.filter-bar::-webkit-scrollbar { display: none; }
+.chip {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: var(--on-surface-muted);
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+.chip.active {
+  background: transparent;
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 600;
+}
+
+/* ===== DETAIL VIEW ===== */
+.detail-back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary);
+  background: none;
+  border: none;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+.detail-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  margin: 0 20px 12px;
+  overflow: hidden;
+}
+.detail-card-header {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-muted);
+  background: var(--surface-dim);
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--outline-variant);
+}
+.detail-card-body {
+  padding: 12px 16px 14px;
+}
+.detail-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--outline-variant);
+}
+.detail-field:last-child { border-bottom: none; }
+.detail-field .df-label {
+  color: var(--on-surface-muted);
+  font-weight: 500;
+  font-size: 13px;
+  min-width: 110px;
+  flex-shrink: 0;
+}
+.detail-field .df-value {
+  color: var(--on-surface);
+  font-weight: 500;
+  text-align: right;
+  padding-left: 16px;
+  word-break: break-word;
+}
+.detail-desc {
+  font-size: 13px;
+  color: var(--on-surface);
+  line-height: 1.6;
+  padding: 8px 16px 14px;
+  background: var(--surface-dim);
+  border-top: 1px solid var(--outline-variant);
+}
+
+/* TIMELINE */
+.timeline-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  margin: 0 20px 12px;
+  overflow: hidden;
+}
+.timeline-card .tc-header {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--on-surface-muted);
+  padding: 14px 16px 8px;
+}
+.tl-entry {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px 14px;
+  position: relative;
+}
+.tl-entry:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 21px;
+  top: 22px;
+  bottom: 0;
+  width: 2px;
+  background: var(--outline-variant);
+}
+.tl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--outline);
+  margin-top: 5px;
+  flex-shrink: 0;
+  border: 2px solid var(--surface);
+  box-shadow: 0 0 0 2px var(--outline);
+}
+.tl-entry:first-child .tl-dot {
+  background: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+.tl-content { flex: 1; min-width: 0; }
+.tl-date {
+  font-size: 11px;
+  color: var(--on-surface-muted);
+  font-family: var(--mono);
+  font-weight: 500;
+}
+.tl-event {
+  font-size: 13px;
+  color: var(--on-surface);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.tl-by {
+  font-size: 11px;
+  color: var(--on-surface-muted);
+  margin-top: 1px;
+}
+
+/* ACTION BUTTONS — enterprise toolbar */
+.action-bar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px 16px;
+  flex-wrap: wrap;
+}
+.btn {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface);
+  color: var(--on-surface);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.15s;
+}
+.btn:active { transform: scale(0.97); background: var(--surface-dim); }
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+  font-weight: 600;
+}
+.btn-primary:active { background: var(--primary-dark); }
+.btn-danger { color: var(--error); border-color: currentColor; background: var(--error-bg); }
+.btn-success { color: var(--success); border-color: currentColor; background: var(--success-bg); }
+.btn-outlined {
+  background: var(--surface);
+  border: 1px solid var(--outline-variant);
+}
+
+/* ===== SEARCH ===== */
+.search-box {
+  padding: 16px 20px;
+}
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,168,0.12);
+}
+.search-input::placeholder { color: var(--on-surface-muted); }
+
+/* PRODUCT CARD */
+.product-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  margin: 0 20px 10px;
+  overflow: hidden;
+}
+.product-card .pc-header {
+  padding: 14px 16px 10px;
+}
+.product-card .pc-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--on-surface);
+}
+.product-card .pc-part {
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--on-surface-variant);
+  margin-top: 2px;
+}
+.product-card .pc-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0 16px;
+}
+.product-card .pc-spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--outline-variant);
+  font-size: 13px;
+}
+.product-card .pc-spec-item:nth-child(odd) { padding-right: 12px; }
+.product-card .pc-spec-item:nth-child(even) { padding-left: 12px; }
+.product-card .ps-label { color: var(--on-surface-variant); font-weight: 500; }
+.product-card .ps-value { color: var(--on-surface); font-weight: 500; }
+.product-card .pc-warranty {
+  margin: 8px 16px 0;
+  padding: 10px 0 14px;
+  border-top: 1px solid var(--outline-variant);
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+}
+
+/* ===== FORM ===== */
+.form-section {
+  padding: 0 20px;
+  margin-bottom: 12px;
+}
+.form-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group:last-child { margin-bottom: 0; }
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  margin-bottom: 6px;
+}
+.form-group select,
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,168,0.12);
+}
+.form-group textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* WARRANTY CARD */
+.warranty-card {
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin: 0 20px 14px;
+  border: 1px solid transparent;
+}
+.warranty-card.active {
+  background: var(--success-bg);
+  border-left: 4px solid var(--success);
+}
+.warranty-card.expired {
+  background: var(--error-bg);
+  border-left: 4px solid var(--error);
+}
+.warranty-card .wc-status {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.warranty-card.active .wc-status { color: var(--success); }
+.warranty-card.expired .wc-status { color: var(--error); }
+.warranty-card .wc-detail {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  margin-top: 4px;
+}
+
+/* PHOTO UPLOAD */
+.photo-upload {
+  border: 2px dashed var(--outline);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  color: var(--on-surface-muted);
+  font-size: 13px;
+  cursor: pointer;
+  margin: 0 20px 14px;
+  background: var(--surface-container);
+  transition: border-color 0.2s;
+}
+.photo-upload svg { margin-bottom: 6px; }
+.photo-upload:active { border-color: var(--primary); }
+
+/* SUCCESS */
+.success-msg {
+  text-align: center;
+  padding: 48px 28px;
+}
+.success-msg .sm-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--success-bg);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.success-msg .sm-icon svg { width: 32px; height: 32px; color: var(--success); }
+.success-msg h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.success-msg .sm-id {
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.success-msg p {
+  font-size: 13px;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+}
+
+/* ===== ANALYTICS ===== */
+.analytics-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  margin: 0 20px 12px;
+  padding: 18px;
+}
+.analytics-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--on-surface);
+  margin-bottom: 2px;
+}
+.analytics-card .chart-subtitle {
+  font-size: 12px;
+  color: var(--on-surface-muted);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+.bar-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.bar-row:last-child { margin-bottom: 0; }
+.bar-label {
+  width: 110px;
+  flex-shrink: 0;
+  color: var(--on-surface-variant);
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.bar-track {
+  flex: 1;
+  height: 18px;
+  background: var(--surface-dim);
+  border-radius: 9px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 9px;
+  transition: width 0.3s;
+}
+.bar-count {
+  width: 24px;
+  text-align: right;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--on-surface);
+}
+.metric-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 20px;
+  margin-bottom: 12px;
+}
+.metric-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.metric-card .mc-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.metric-card .mc-icon svg { width: 18px; height: 18px; }
+.metric-card .mc-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+}
+.metric-card .mc-label {
+  font-size: 12px;
+  color: var(--on-surface-muted);
+  margin-top: 2px;
+}
+
+/* SLA INDICATOR */
+.sla-pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-top: 3px;
+}
+.sla-ok { background: var(--success-bg); color: var(--success); }
+.sla-warn { background: #FFF8E1; color: #F57F17; }
+.sla-breach { background: var(--error-bg); color: var(--error); }
+
+/* TREND SPARKLINE */
+.sparkline-wrap {
+  padding: 4px 0 0;
+}
+.sparkline-wrap svg { width: 100%; display: block; }
+.spark-months {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--on-surface-muted);
+  padding: 4px 2px 0;
+}
+
+/* LOT RISK TABLE */
+.lot-risk-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--outline-variant);
+  font-size: 13px;
+}
+.lot-risk-row:last-child { border-bottom: none; }
+.lot-risk-left { flex: 1; min-width: 0; }
+.lot-risk-lot {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--on-surface);
+}
+.lot-risk-product {
+  font-size: 11px;
+  color: var(--on-surface-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lot-risk-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.lot-risk-count {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 14px;
+}
+.risk-level {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+.risk-elevated { background: #FFF3E0; color: #E65100; }
+.risk-normal { background: var(--surface-dim); color: var(--on-surface-muted); }
+
+/* DONUT CHART */
+.donut-chart-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.donut-legend {
+  flex: 1;
+  min-width: 0;
+}
+.donut-legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: var(--on-surface-variant);
+}
+.donut-legend-item:last-child { margin-bottom: 0; }
+.donut-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.donut-legend-count {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--on-surface);
+}
+
+/* WARRANTY LIFECYCLE STATUSES */
+.wl-active { background: var(--success-bg); color: var(--success); }
+.wl-expiring_soon { background: #FFF8E1; color: #F57F17; }
+.wl-expired { background: var(--error-bg); color: var(--error); }
+.wl-voided { background: #FAFAFA; color: #616161; text-decoration: line-through; }
+
+/* WARRANTY REGISTRATION LIST */
+.reg-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  margin: 0 20px 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.reg-card:active { border-color: var(--primary); }
+.reg-card .reg-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;
+}
+.reg-card .reg-id {
+  font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--primary);
+}
+.reg-card .reg-customer {
+  font-size: 14px; font-weight: 500; color: var(--on-surface); margin-bottom: 2px;
+}
+.reg-card .reg-project {
+  font-size: 12px; color: var(--on-surface-variant); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.reg-card .reg-meta {
+  display: flex; gap: 12px; margin-top: 6px; font-size: 11px; color: var(--on-surface-muted);
+}
+
+/* DATA SOURCE BADGE */
+.data-source-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.03em;
+  background: var(--surface-dim); color: var(--on-surface-muted);
+  padding: 3px 10px; border-radius: 12px; margin-top: 4px;
+}
+.data-source-badge .dsb-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #4CAF50;
+}
+
+/* CLAIM SOURCE CHIP */
+.source-chip {
+  display: inline-block; font-size: 10px; font-weight: 600;
+  padding: 2px 8px; border-radius: 4px; letter-spacing: 0.03em;
+}
+.source-portal { background: var(--info-bg); color: var(--info); }
+.source-phone { background: #FFF3E0; color: #E65100; }
+.source-email { background: #F3E5F5; color: #7B1FA2; }
+
+/* VOID MODAL */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); z-index: 100;
+  display: flex; align-items: flex-end; justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.modal-sheet {
+  background: var(--surface); border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  width: 100%; max-width: 480px; max-height: 80vh;
+  padding: 24px 20px; overflow-y: auto;
+  border: 1px solid var(--outline-variant);
+  border-bottom: none;
+  animation: slideUp 0.25s ease-out;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.modal-sheet h3 {
+  font-size: 18px; font-weight: 500; margin-bottom: 4px; color: var(--on-surface);
+}
+.modal-sheet .modal-sub {
+  font-size: 13px; color: var(--on-surface-variant); margin-bottom: 16px;
+}
+.void-reason-option {
+  display: block; width: 100%; text-align: left;
+  background: var(--surface); border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 8px;
+  cursor: pointer; transition: border-color 0.15s;
+}
+.void-reason-option:hover, .void-reason-option.selected {
+  border-color: var(--error); background: var(--error-bg);
+}
+.void-reason-option .vro-label {
+  font-size: 14px; font-weight: 500; color: var(--on-surface);
+}
+.void-reason-option .vro-desc {
+  font-size: 12px; color: var(--on-surface-variant); margin-top: 2px;
+}
+
+/* EXPIRY TRACKING */
+.expiry-bucket {
+  display: flex; align-items: center; padding: 10px 0;
+  border-bottom: 1px solid var(--outline-variant); font-size: 13px;
+}
+.expiry-bucket:last-child { border-bottom: none; }
+.expiry-bucket .eb-label { flex: 1; color: var(--on-surface); font-weight: 500; }
+.expiry-bucket .eb-count {
+  font-family: var(--mono); font-weight: 600; font-size: 16px;
+  color: var(--on-surface); margin-right: 8px;
+}
+.expiry-bucket .eb-badge {
+  font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px;
+}
+.eb-urgent { background: var(--error-bg); color: var(--error); }
+.eb-warning { background: #FFF3E0; color: #E65100; }
+.eb-info { background: var(--info-bg); color: var(--info); }
+
+/* REGISTRATION STEPPER */
+.reg-stepper {
+  display: flex;
+  padding: 16px 20px 8px;
+  gap: 4px;
+}
+.reg-step {
+  flex: 1;
+  text-align: center;
+}
+.reg-step .rs-bar {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--outline-variant);
+  margin-bottom: 6px;
+  transition: background 0.3s;
+}
+.reg-step.active .rs-bar { background: var(--primary); }
+.reg-step.done .rs-bar { background: var(--success); }
+.reg-step .rs-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--on-surface-muted);
+  transition: color 0.2s;
+}
+.reg-step.active .rs-label { color: var(--primary); }
+.reg-step.done .rs-label { color: var(--success); }
+
+/* COMPLIANCE CHECKBOXES */
+.compliance-section {
+  padding: 0 20px 12px;
+}
+.compliance-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  padding: 14px 16px;
+  border-left: 3px solid var(--warning);
+}
+.compliance-card .cc-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--on-surface-muted);
+  margin-bottom: 10px;
+}
+.compliance-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.compliance-check:last-child { margin-bottom: 0; }
+.compliance-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+}
+.compliance-check .cc-text {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+}
+
+/* DOCUMENT UPLOAD SLOTS */
+.doc-upload-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 20px 12px;
+}
+.doc-upload-slot {
+  border: 2px dashed var(--outline);
+  border-radius: var(--radius-md);
+  padding: 16px 10px;
+  text-align: center;
+  color: var(--on-surface-muted);
+  font-size: 11px;
+  cursor: pointer;
+  background: var(--surface-container);
+  transition: border-color 0.2s;
+  line-height: 1.4;
+}
+.doc-upload-slot:active { border-color: var(--primary); }
+.doc-upload-slot svg { margin-bottom: 4px; }
+.doc-upload-slot .dus-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* LIVE EXPIRY PREVIEW */
+.expiry-preview {
+  background: var(--success-bg);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin: 0 20px 14px;
+  border-left: 4px solid var(--success);
+  transition: all 0.3s;
+}
+.expiry-preview.pending {
+  background: var(--surface-dim);
+  border-left-color: var(--outline);
+}
+.expiry-preview .ep-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--success);
+  margin-bottom: 4px;
+}
+.expiry-preview.pending .ep-label { color: var(--on-surface-muted); }
+.expiry-preview .ep-dates {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--on-surface);
+}
+.expiry-preview .ep-duration {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  margin-top: 2px;
+}
+
+/* ENVIRONMENT INDICATOR */
+.env-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+}
+.env-dry { background: #E3F2FD; color: #1565C0; }
+.env-wet { background: #E0F7FA; color: #00838F; }
+.env-hazardous { background: #FFF3E0; color: #E65100; }
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  padding: 48px 28px;
+  color: var(--on-surface-muted);
+  font-size: 14px;
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #323232;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  box-shadow: var(--shadow-3);
+}
+.toast.show { opacity: 1; }
+
+/* ===== THEME TOGGLE (login footer) ===== */
+.theme-toggle-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 4px;
+  background: var(--surface);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+}
+.theme-toggle-wrap .tt-label {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  color: var(--on-surface-muted);
+  transition: all 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.theme-toggle-wrap .tt-label.active {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: var(--shadow-1);
+}
+
+/* ===== CLASSIC THEME ===== */
+/* Data-dense table for claims grid — Refero-inspired clean tables */
+.claims-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.claims-grid thead th {
+  background: var(--surface);
+  border: none;
+  border-bottom: 2px solid var(--outline-variant);
+  padding: 10px 12px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--on-surface-muted);
+  text-align: left;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.claims-grid tbody td {
+  border: none;
+  border-bottom: 1px solid var(--outline-variant);
+  padding: 10px 12px;
+  color: var(--on-surface);
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+.claims-grid tbody tr { cursor: pointer; transition: background 0.12s; }
+.claims-grid tbody tr:hover { background: var(--primary-light); }
+.claims-grid tbody tr:active { background: #D6E7F7; }
+.claims-grid .cg-id {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--primary);
+}
+.claims-grid .cg-status { white-space: nowrap; }
+.claims-grid .cg-sev { white-space: nowrap; }
+.classic-grid-wrap {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  margin: 0 16px 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--outline-variant);
+}
+.classic-grid-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--on-surface-muted);
+  background: var(--surface-dim);
+  border-top: 1px solid var(--outline-variant);
+}
+
+/* Registration table (classic) */
+.reg-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.reg-grid thead th {
+  background: var(--surface);
+  border: none;
+  border-bottom: 2px solid var(--outline-variant);
+  padding: 10px 12px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--on-surface-muted);
+  text-align: left;
+  white-space: nowrap;
+}
+.reg-grid tbody td {
+  border: none;
+  border-bottom: 1px solid var(--outline-variant);
+  padding: 10px 12px;
+  color: var(--on-surface);
+  vertical-align: middle;
+}
+.reg-grid tbody tr { cursor: pointer; transition: background 0.12s; }
+.reg-grid tbody tr:hover { background: var(--primary-light); }
+
+/* Classic theme overrides — body-level */
+body.theme-classic .stat-tile {
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+body.theme-classic .stat-tile .st-value {
+  font-size: 22px;
+}
+body.theme-classic .section-label {
+  font-size: 12px;
+  padding: 12px 12px 6px;
+}
+body.theme-classic .filter-bar {
+  padding: 0 12px;
+}
+body.theme-classic .stat-row {
+  padding: 8px 12px 10px;
+  gap: 8px;
+}
+body.theme-classic .detail-card {
+  margin: 0 12px 10px;
+  border-radius: 4px;
+}
+body.theme-classic .detail-card-header {
+  border-radius: 4px 4px 0 0;
+  font-size: 11px;
+  padding: 6px 10px;
+}
+body.theme-classic .detail-field {
+  padding: 5px 0;
+  font-size: 12px;
+}
+body.theme-classic .action-bar {
+  margin: 0 12px 10px;
+}
+body.theme-classic .timeline-card {
+  margin: 0 12px 10px;
+}
+body.theme-classic .btn {
+  padding: 7px 14px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+body.theme-classic .analytics-card {
+  margin: 0 12px 10px;
+  padding: 12px;
+  border-radius: 4px;
+}
+body.theme-classic .metric-row {
+  padding: 0 12px;
+  gap: 8px;
+}
+body.theme-classic .metric-card {
+  border-radius: 4px;
+  padding: 12px;
+}
+body.theme-classic .list-container {
+  margin: 0 12px 10px;
+  border-radius: 4px;
+}
+body.theme-classic .list-header {
+  border-radius: 4px 4px 0 0;
+}
+body.theme-classic .warranty-card {
+  margin: 0 12px 10px;
+  border-radius: 4px;
+}
+body.theme-classic .reg-card {
+  margin: 0 12px 8px;
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+body.theme-classic .form-section {
+  padding: 0 12px;
+}
+body.theme-classic .search-box {
+  padding: 12px;
+}
+body.theme-classic .compliance-section {
+  padding: 0 12px 10px;
+}
+body.theme-classic .photo-upload {
+  margin: 0 12px 10px;
+  border-radius: 4px;
+}
+body.theme-classic .doc-upload-row {
+  padding: 0 12px 10px;
+}
+body.theme-classic .expiry-preview {
+  margin: 0 12px 10px;
+  border-radius: 4px;
+}
+body.theme-classic .product-card {
+  margin: 0 12px 8px;
+  border-radius: 4px;
+}
+body.theme-classic .detail-back {
+  padding: 10px 12px;
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen">
+  <div class="login-hero">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    </div>
+    <h1>Tessford Lighting Co.</h1>
+    <div class="tagline">Warranty Desk</div>
+  </div>
+  <div class="login-body">
+    <div class="login-form" id="loginForm">
+      <div class="lf-title">Sign in</div>
+      <div class="lf-group">
+        <label for="loginRole">Who’s signing in</label>
+        <select id="loginRole" onchange="onLoginRoleChange()">
+          <option value="">Choose one</option>
+          <option value="manufacturer">Tessford warranty team</option>
+          <option value="distributor">Contractor</option>
+        </select>
+      </div>
+      <div class="lf-group" id="loginDistGroup" style="display:none">
+        <label for="loginDistAccount">Your company</label>
+        <select id="loginDistAccount" onchange="onLoginDistChange()">
+          <option value="">Choose your company</option>
+        </select>
+      </div>
+      <div class="lf-account-info" id="loginAccountInfo"></div>
+      <button class="lf-btn" id="loginBtn" onclick="doLogin()" disabled>Sign in</button>
+    </div>
+  </div>
+  <div class="login-footer">
+    <span class="tf-demo">DEMO</span> Sample data. Tessford Lighting Co. and every name here are fictional.
+  </div>
+</div>
+
+<!-- APP SHELL -->
+<div id="appShell">
+  <div class="app-header">
+    <div class="ah-left">
+      <span class="ah-brand">Tessford Lighting Co.</span>
+      <span class="ah-user" id="headerUser"></span>
+      <div class="data-source-badge" id="dataSourceBadge" style="display:none"><span class="dsb-dot"></span>Connected to: Sample Data</div>
+    </div>
+    <button class="ah-signout" onclick="signOut()">Sign Out</button>
+  </div>
+  <div class="tab-bar-top" id="mfgTabs" style="display:none">
+    <button onclick="switchMfgTab('dashboard')" data-tab="dashboard">Dashboard</button>
+    <button onclick="switchMfgTab('queue')" data-tab="queue">Claims Queue</button>
+    <button onclick="switchMfgTab('analytics')" data-tab="analytics">Analytics</button>
+  </div>
+  <div id="mainContent"></div>
+  <nav class="nav-bottom" id="distNav" style="display:none">
+    <button onclick="switchDistTab('home')" data-tab="home">
+      <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"/></svg>
+      Home
+    </button>
+    <button onclick="switchDistTab('lookup')" data-tab="lookup">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      Look up
+    </button>
+    <button onclick="switchDistTab('newclaim')" data-tab="newclaim">
+      <svg viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+      File
+    </button>
+    <button onclick="switchDistTab('register')" data-tab="register">
+      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      Register
+    </button>
+    <button onclick="switchDistTab('history')" data-tab="history">
+      <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      History
+    </button>
+  </nav>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="data/synthetic-data.js"></script>
+
+<script>
+var DATA = null;
+var currentUser = null;
+var currentMfgTab = 'dashboard';
+var currentDistTab = 'home';
+var newClaims = [];
+var newRegistrations = [];
+
+function init() {
+  if (typeof SYNTHETIC_DATA !== 'undefined') { DATA = SYNTHETIC_DATA; }
+  else {
+    fetch('data/synthetic-data.json').then(function(r){return r.json();}).then(function(d){ DATA=d; renderLogin(); })
+      .catch(function(){ document.getElementById('loginOptions').innerHTML='<div class="empty-state">Error: Could not load data.</div>'; });
+    return;
+  }
+  renderLogin();
+}
+
+function renderLogin() {
+  if (!DATA) return;
+  /* Populate distributor dropdown */
+  var distSelect = document.getElementById('loginDistAccount');
+  var html = '<option value="">Choose your company</option>';
+  DATA.distributors.forEach(function(d) {
+    html += '<option value="'+d.id+'">'+esc(d.name)+' ('+d.tier+')</option>';
+  });
+  distSelect.innerHTML = html;
+}
+
+function onLoginRoleChange() {
+  var role = document.getElementById('loginRole').value;
+  var distGroup = document.getElementById('loginDistGroup');
+  var info = document.getElementById('loginAccountInfo');
+  var btn = document.getElementById('loginBtn');
+  if (role === 'manufacturer') {
+    distGroup.style.display = 'none';
+    info.className = 'lf-account-info visible';
+    info.innerHTML = '<strong>Tessford Warranty Team</strong><br>'+DATA.qualityTeam.length+' team members · Full dashboard access';
+    btn.disabled = false;
+  } else if (role === 'distributor') {
+    distGroup.style.display = 'block';
+    document.getElementById('loginDistAccount').value = '';
+    info.className = 'lf-account-info';
+    info.innerHTML = '';
+    btn.disabled = true;
+  } else {
+    distGroup.style.display = 'none';
+    info.className = 'lf-account-info';
+    info.innerHTML = '';
+    btn.disabled = true;
+  }
+}
+
+function onLoginDistChange() {
+  var distId = document.getElementById('loginDistAccount').value;
+  var info = document.getElementById('loginAccountInfo');
+  var btn = document.getElementById('loginBtn');
+  if (!distId) { info.className='lf-account-info'; btn.disabled=true; return; }
+  var d = getDist(distId);
+  if (d) {
+    info.className = 'lf-account-info visible';
+    info.innerHTML = '<strong>'+esc(d.name)+'</strong><br>'+esc(d.city)+' · '+d.tier+' Tier · Since '+d.accountSince;
+    btn.disabled = false;
+  }
+}
+
+function doLogin() {
+  var role = document.getElementById('loginRole').value;
+  if (!role) return;
+  if (role === 'manufacturer') { handleLogin('manufacturer'); }
+  else {
+    var distId = document.getElementById('loginDistAccount').value;
+    if (distId) handleLogin('distributor', distId);
+  }
+}
+
+function handleLogin(role, distId) {
+  if (!DATA) return;
+  if (role === 'manufacturer') { currentUser = {role:'manufacturer', name:'Warranty Team'}; }
+  else { var d = DATA.distributors.find(function(x){return x.id===distId;}); currentUser = {role:'distributor', distId:distId, name:d.name}; }
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('appShell').style.display = 'flex';
+  document.getElementById('headerUser').textContent = currentUser.name;
+  if (role === 'manufacturer') {
+    document.getElementById('mfgTabs').style.display = 'flex';
+    document.getElementById('distNav').style.display = 'none';
+    document.getElementById('dataSourceBadge').style.display = 'inline-flex';
+    switchMfgTab('dashboard');
+  } else {
+    document.getElementById('mfgTabs').style.display = 'none';
+    document.getElementById('distNav').style.display = 'flex';
+    document.getElementById('dataSourceBadge').style.display = 'none';
+    switchDistTab('home');
+  }
+}
+
+function signOut() {
+  currentUser=null;
+  document.getElementById('appShell').style.display='none';
+  document.getElementById('loginScreen').style.display='flex';
+  document.getElementById('loginRole').value='';
+  document.getElementById('loginDistGroup').style.display='none';
+  document.getElementById('loginAccountInfo').className='lf-account-info';
+  document.getElementById('loginBtn').disabled=true;
+  /* Theme persists — body class and toggle state remain */
+}
+function showToast(msg) { var t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(function(){t.classList.remove('show');},2500); }
+function getAllClaims() { return DATA.claims.concat(newClaims); }
+function getProd(pn) { return DATA.products.find(function(p){return p.partNumber===pn;}); }
+function getDist(id) { return DATA.distributors.find(function(d){return d.id===id;}); }
+function getOrder(id) { return DATA.orders.find(function(o){return o.orderId===id;}); }
+function fmtDate(d) { if(!d) return '—'; return new Date(d+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }
+function fmtCur(n) { if(n==null) return '—'; return '$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function statusLabel(s) { var m={pending:'Submitted',under_review:'Under Review',sample_requested:'RA Issued – Return Unit',info_requested:'Info Requested',approved:'Approved',rejected:'Rejected'}; return m[s]||s; }
+function sevLabel(s) { var m={critical:'Critical',high:'High',medium:'Medium',low:'Low'}; return m[s]||s; }
+function esc(s) { var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+function getAllRegistrations() { return (DATA.warrantyRegistrations||[]).concat(newRegistrations); }
+function getWarrantyStatus(reg) {
+  if (reg.status === 'voided') return { status:'voided', label:'VOIDED', cls:'wl-voided' };
+  var today = new Date();
+  var expiry = new Date(reg.warrantyExpiry + 'T00:00:00');
+  if (today > expiry) return { status:'expired', label:'EXPIRED', cls:'wl-expired' };
+  var diffDays = Math.floor((expiry - today) / 86400000);
+  if (diffDays <= 90) return { status:'expiring_soon', label:'EXPIRING SOON', cls:'wl-expiring_soon' };
+  return { status:'active', label:'ACTIVE', cls:'wl-active' };
+}
+function warrantyStatusLabel(s) { var m={active:'Active',expiring_soon:'Expiring Soon',expired:'Expired',voided:'Voided'}; return m[s]||s; }
+function sourceChipHtml(source) {
+  if (!source) return '';
+  var cls = 'source-' + source.toLowerCase();
+  return '<span class="source-chip ' + cls + '">' + esc(source) + '</span>';
+}
+
+var accentColors = { total:'var(--chart-1)', open:'var(--chart-2)', pending:'var(--warning-fill)', sample:'var(--chart-3)' };
+var currentTheme = 'modern';
+
+function setTheme(theme) {
+  currentTheme = theme;
+  if (theme === 'classic') document.body.classList.add('theme-classic');
+  else document.body.classList.remove('theme-classic');
+  /* Update toggle pills */
+  var pills = document.querySelectorAll('#themeToggle .tt-label');
+  for (var i=0;i<pills.length;i++) pills[i].classList.toggle('active', pills[i].getAttribute('data-theme')===theme);
+  /* Re-render current view if already logged in */
+  if (currentUser) {
+    if (currentUser.role === 'manufacturer') switchMfgTab(currentMfgTab);
+    else switchDistTab(currentDistTab);
+  }
+}
+
+function isClassic() { return currentTheme === 'classic'; }
+
+/* ===== TABULAR CLAIM GRID (Classic theme) ===== */
+function claimTableMfg(claims, handler) {
+  var sorted = claims.slice().sort(function(a,b){ return b.claimDate.localeCompare(a.claimDate); });
+  var html = '<div class="classic-grid-wrap"><table class="claims-grid"><thead><tr>'+
+    '<th>Claim ID</th><th>Contractor</th><th>Product</th><th>Date Code</th><th>Status</th><th>Severity</th><th>SLA</th><th>Date</th>'+
+    '</tr></thead><tbody>';
+  sorted.forEach(function(c){
+    var prod = getProd(c.partNumber);
+    var dist = getDist(c.distributorId);
+    var sla = getSlaInfo(c);
+    html += '<tr onclick="'+handler+'(\''+c.claimId+'\')">'+
+      '<td class="cg-id">'+c.claimId+'</td>'+
+      '<td>'+(dist?esc(dist.name):c.distributorId)+'</td>'+
+      '<td>'+(prod?esc(prod.name):c.partNumber)+'</td>'+
+      '<td style="font-family:var(--mono);font-size:11px">'+c.lotNumber+'</td>'+
+      '<td class="cg-status"><span class="status-chip status-'+c.status+'">'+statusLabel(c.status)+'</span></td>'+
+      '<td class="cg-sev"><span class="severity-text sev-'+c.severity+'">'+sevLabel(c.severity)+'</span></td>'+
+      '<td><span class="sla-pill '+sla.cls+'">'+sla.text+'</span></td>'+
+      '<td>'+fmtDate(c.claimDate)+'</td></tr>';
+  });
+  html += '</tbody></table><div class="classic-grid-footer"><span>'+sorted.length+' Records Displayed</span><span>Ready</span></div></div>';
+  return html;
+}
+
+function claimTableDist(claims, handler) {
+  var sorted = claims.slice().sort(function(a,b){ return b.claimDate.localeCompare(a.claimDate); });
+  var html = '<div class="classic-grid-wrap"><table class="claims-grid"><thead><tr>'+
+    '<th>Claim ID</th><th>Product</th><th>Failure Type</th><th>Status</th><th>Severity</th><th>Date</th><th>Credit</th>'+
+    '</tr></thead><tbody>';
+  sorted.forEach(function(c){
+    var prod = getProd(c.partNumber);
+    html += '<tr onclick="'+handler+'(\''+c.claimId+'\')">'+
+      '<td class="cg-id">'+c.claimId+'</td>'+
+      '<td>'+(prod?esc(prod.name):c.partNumber)+'</td>'+
+      '<td>'+esc(c.failureType)+'</td>'+
+      '<td class="cg-status"><span class="status-chip status-'+c.status+'">'+statusLabel(c.status)+'</span></td>'+
+      '<td class="cg-sev"><span class="severity-text sev-'+c.severity+'">'+sevLabel(c.severity)+'</span></td>'+
+      '<td>'+fmtDate(c.claimDate)+'</td>'+
+      '<td>'+(c.creditAmount?fmtCur(c.creditAmount):'—')+'</td></tr>';
+  });
+  html += '</tbody></table><div class="classic-grid-footer"><span>'+sorted.length+' Records Displayed</span><span>Ready</span></div></div>';
+  return html;
+}
+
+function regTableDist(regs, handler) {
+  var html = '<div class="classic-grid-wrap"><table class="reg-grid"><thead><tr>'+
+    '<th>Reg ID</th><th>Customer</th><th>Product</th><th>Date Code</th><th>Qty</th><th>Status</th><th>Install Date</th><th>Expires</th>'+
+    '</tr></thead><tbody>';
+  regs.forEach(function(r){
+    var ws = getWarrantyStatus(r);
+    var prod = getProd(r.partNumber);
+    html += '<tr onclick="'+handler+'(\''+r.registrationId+'\')">'+
+      '<td style="font-family:var(--mono);font-weight:600;color:var(--primary);font-size:11px">'+r.registrationId+'</td>'+
+      '<td>'+esc(r.endCustomer)+'</td>'+
+      '<td>'+(prod?esc(prod.name):r.partNumber)+'</td>'+
+      '<td style="font-family:var(--mono);font-size:11px">'+r.lotNumber+'</td>'+
+      '<td>'+r.quantityRegistered.toLocaleString()+'</td>'+
+      '<td><span class="status-chip '+ws.cls+'">'+ws.label+'</span></td>'+
+      '<td>'+fmtDate(r.installDate)+'</td>'+
+      '<td>'+fmtDate(r.warrantyExpiry)+'</td></tr>';
+  });
+  html += '</tbody></table><div class="classic-grid-footer"><span>'+regs.length+' Records Displayed</span><span>Ready</span></div></div>';
+  return html;
+}
+
+/* ===== MANUFACTURER ===== */
+function switchMfgTab(tab) {
+  currentMfgTab = tab;
+  var btns=document.querySelectorAll('#mfgTabs button');
+  for(var i=0;i<btns.length;i++) btns[i].classList.toggle('active',btns[i].getAttribute('data-tab')===tab);
+  var mc=document.getElementById('mainContent');
+  if(tab==='dashboard') renderMfgDash(mc);
+  else if(tab==='queue') renderMfgQueue(mc);
+  else if(tab==='analytics') renderMfgAnalytics(mc);
+}
+
+function renderMfgDash(el) {
+  var claims=getAllClaims(), open=claims.filter(function(c){return c.status!=='approved'&&c.status!=='rejected';}),
+    pending=claims.filter(function(c){return c.status==='pending';}),
+    samples=claims.filter(function(c){return c.status==='sample_requested';});
+  var html='<div class="stat-row">'+
+    tile(claims.length,'Total Claims','var(--chart-1)')+tile(open.length,'Open','var(--chart-2)')+
+    tile(pending.length,'Submitted','var(--warning-fill)')+tile(samples.length,'Awaiting Return','var(--chart-3)')+
+    '</div><div class="section-label">Recent Claims</div>';
+  if (isClassic()) {
+    html += claimTableMfg(claims, 'showMfgDetail');
+  } else {
+    html += '<div class="list-container">'+listHeader();
+    claims.slice().sort(function(a,b){return b.claimDate.localeCompare(a.claimDate);}).forEach(function(c){
+      html += claimRow(c, true, 'showMfgDetail');
+    });
+    html+='</div>';
+  }
+  el.innerHTML=html; el.scrollTop=0;
+}
+
+function tile(val, label, color) {
+  return '<div class="stat-tile"><div class="st-accent" style="background:'+color+'"></div><div class="st-value">'+val+'</div><div class="st-label">'+label+'</div></div>';
+}
+
+function getSlaInfo(c) {
+  /* SLA targets in business days: critical=1, high=2, medium=5, low=10 */
+  var targets = { critical:1, high:2, medium:5, low:10 };
+  var target = targets[c.severity] || 10;
+  if (c.status === 'approved' || c.status === 'rejected') return { cls:'sla-ok', text:'Resolved' };
+  var start = new Date(c.claimDate), now = new Date();
+  var elapsed = Math.floor((now - start) / 86400000);
+  var pct = elapsed / target;
+  if (pct >= 1) return { cls:'sla-breach', text:'SLA Breached' };
+  if (pct >= 0.7) return { cls:'sla-warn', text: Math.max(0, target - elapsed) + 'd left' };
+  return { cls:'sla-ok', text: 'On Track' };
+}
+
+function listHeader() {
+  return '<div class="list-header"><span class="lh-main">Claim / Product</span><span class="lh-status">Status</span></div>';
+}
+
+function claimRow(c, showDist, handler) {
+  var prod=getProd(c.partNumber), dist=getDist(c.distributorId);
+  var prodName = prod ? esc(prod.name) : c.partNumber;
+  var distName = dist ? esc(dist.name) : '';
+  var slaHtml = '';
+  if (showDist) { /* manufacturer view — show SLA */
+    var sla = getSlaInfo(c);
+    slaHtml = '<div class="sla-pill '+sla.cls+'">'+sla.text+'</div>';
+  }
+  return '<div class="list-row" onclick="'+handler+'(\''+c.claimId+'\')">' +
+    '<div class="lr-main"><div class="lr-id">'+c.claimId+'</div>' +
+    '<div class="lr-product">'+prodName+(showDist&&distName?' — '+distName:'')+'</div>' +
+    '<div class="lr-date">'+fmtDate(c.claimDate)+' · '+esc(c.failureType)+'</div></div>' +
+    '<div class="lr-right"><div class="status-chip status-'+c.status+'">'+statusLabel(c.status)+'</div>' +
+    slaHtml +
+    '<div class="severity-text sev-'+c.severity+'">'+sevLabel(c.severity)+'</div></div></div>';
+}
+
+function renderMfgQueue(el) {
+  var statuses=['all','pending','under_review','sample_requested','info_requested','approved','rejected'];
+  var labels=['All','Submitted','Under Review','RA Issued','Info Req.','Approved','Rejected'];
+  var html='<div class="filter-bar" id="queueFilters">';
+  statuses.forEach(function(s,i){ html+='<button class="chip'+(s==='all'?' active':'')+'" onclick="filterQueue(\''+s+'\')" data-filter="'+s+'">'+labels[i]+'</button>'; });
+  html+='</div><div id="queueListWrap"></div>';
+  el.innerHTML=html; filterQueue('all'); el.scrollTop=0;
+}
+
+function filterQueue(status) {
+  var chips=document.querySelectorAll('#queueFilters .chip');
+  for(var i=0;i<chips.length;i++) chips[i].classList.toggle('active',chips[i].getAttribute('data-filter')===status);
+  var claims=getAllClaims();
+  var filtered=status==='all'?claims:claims.filter(function(c){return c.status===status;});
+  var sorted=filtered.slice().sort(function(a,b){return b.claimDate.localeCompare(a.claimDate);});
+  var wrap=document.getElementById('queueListWrap');
+  if(!sorted.length){ wrap.innerHTML='<div class="empty-state">No claims match this filter.</div>'; return; }
+  if (isClassic()) {
+    wrap.innerHTML = claimTableMfg(sorted, 'showMfgDetail');
+  } else {
+    var html='<div class="list-container">'+listHeader()+'<div id="queueList">';
+    sorted.forEach(function(c){ html+=claimRow(c,true,'showMfgDetail'); });
+    html+='</div></div>';
+    wrap.innerHTML=html;
+  }
+}
+
+function showMfgDetail(claimId) {
+  var c=getAllClaims().find(function(x){return x.claimId===claimId;});
+  if(!c) return;
+  var prod=getProd(c.partNumber), dist=getDist(c.distributorId);
+  var el=document.getElementById('mainContent');
+  var backTab=currentMfgTab==='queue'?'queue':'dashboard';
+  var html='<button class="detail-back" onclick="switchMfgTab(\''+backTab+'\')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back</button>';
+
+  // Claim header
+  html+='<div class="detail-card"><div class="detail-card-header">Claim '+c.claimId+'</div><div class="detail-card-body">'+
+    df('Status','<span class="status-chip status-'+c.status+'">'+statusLabel(c.status)+'</span>')+
+    df('Severity','<span class="severity-text sev-'+c.severity+'">'+sevLabel(c.severity)+'</span>')+
+    df('Claim Date',fmtDate(c.claimDate))+
+    (c.claimSource?df('Source',sourceChipHtml(c.claimSource)):'')+
+    df('Assigned To',c.assignedTo||'Unassigned')+'</div></div>';
+
+  // Warranty status for this product/lot
+  var regMatch = getAllRegistrations().find(function(r){ return r.lotNumber === c.lotNumber && r.distributorId === c.distributorId; });
+  if (regMatch) {
+    var ws = getWarrantyStatus(regMatch);
+    var regEnvLabels = { dry_indoor:'Dry (Indoor)', wet_underground:'Wet (Outdoor)', hazardous_industrial:'Hazardous' };
+    var regEnvHtml = '';
+    if (regMatch.environment) {
+      var reCls = regMatch.environment === 'dry_indoor' ? 'env-dry' : regMatch.environment === 'wet_underground' ? 'env-wet' : 'env-hazardous';
+      regEnvHtml = df('Install Environment','<span class="env-chip '+reCls+'">'+(regEnvLabels[regMatch.environment]||regMatch.environment)+'</span>');
+    }
+    var complianceHtml = '';
+    if (regMatch.necCompliance) complianceHtml += '<span style="color:var(--success);font-size:12px;margin-right:8px">✓ NEC</span>';
+    if (regMatch.installCompliance) complianceHtml += '<span style="color:var(--success);font-size:12px">✓ Install Spec</span>';
+    html+='<div class="detail-card"><div class="detail-card-header">Warranty Registration</div><div class="detail-card-body">'+
+      df('Registration',regMatch.registrationId)+
+      df('Warranty Status','<span class="status-chip '+ws.cls+'">'+ws.label+'</span>')+
+      df('End Customer',esc(regMatch.endCustomer))+
+      regEnvHtml+
+      df('Install Date',fmtDate(regMatch.installDate))+
+      df('Expires',fmtDate(regMatch.warrantyExpiry))+
+      (complianceHtml ? df('Compliance',complianceHtml) : '')+
+      (ws.status==='voided'?df('Void Reason',esc(regMatch.voidReason||'—')):'')+
+      '</div></div>';
+  }
+
+  if(prod) {
+    html+='<div class="detail-card"><div class="detail-card-header">Product</div><div class="detail-card-body">'+
+      df('Name',esc(prod.name))+df('Part Number','<span style="font-family:var(--mono)">'+prod.partNumber+'</span>')+
+      df('Watts / Size',prod.awg)+df('Ambient Rating',prod.tempRating)+
+      '</div><div style="padding:0 16px 12px"><div class="cert-badges">'+prod.certifications.map(function(x){return '<span class="cert-badge">'+esc(x)+'</span>';}).join('')+'</div></div></div>';
+  }
+
+  if(dist) {
+    html+='<div class="detail-card"><div class="detail-card-header">Contractor</div><div class="detail-card-body">'+
+      df('Name',esc(dist.name))+df('Contact',esc(dist.contactName))+df('Tier',dist.tier)+df('Region',dist.region)+'</div></div>';
+  }
+
+  html+='<div class="detail-card"><div class="detail-card-header">Failure Details</div><div class="detail-card-body">'+
+    df('Order','<span style="font-family:var(--mono)">'+c.orderId+'</span>')+
+    df('Date Code','<span style="font-family:var(--mono)">'+c.lotNumber+'</span>')+
+    df('Qty Affected',c.quantityAffected.toLocaleString()+(prod?' '+prod.unitOfMeasure:''))+
+    df('Failure Type',esc(c.failureType))+df('Environment',esc(c.environment||'—'))+
+    (c.installDate?df('Install Date',fmtDate(c.installDate)):'')+'</div>'+
+    '<div class="detail-desc">'+esc(c.description)+'</div></div>';
+
+  if(c.resolution) {
+    html+='<div class="detail-card"><div class="detail-card-header">Decision</div>'+
+      '<div class="detail-desc">'+esc(c.resolution)+'</div>'+
+      (c.creditAmount!=null||c.resolvedDate?'<div class="detail-card-body">'+
+      (c.creditAmount!=null?df('Credit Issued',fmtCur(c.creditAmount)):'')+
+      (c.resolvedDate?df('Resolved',fmtDate(c.resolvedDate)):'')+
+      '</div>':'')+'</div>';
+  }
+
+  if(c.sampleRequested) {
+    html+='<div class="detail-card"><div class="detail-card-header">RA / Return Tracking</div><div class="detail-card-body">'+
+      df('Requested','Yes')+df('Received',c.sampleReceived?fmtDate(c.sampleReceivedDate):'Pending')+'</div></div>';
+  }
+
+  if(c.status!=='approved'&&c.status!=='rejected') {
+    html+='<div class="action-bar">'+
+      '<button class="btn btn-success" onclick="simAction(\''+c.claimId+'\',\'approved\')">Approve</button>'+
+      '<button class="btn btn-danger" onclick="simAction(\''+c.claimId+'\',\'rejected\')">Reject</button>'+
+      '<button class="btn btn-outlined" onclick="simAction(\''+c.claimId+'\',\'sample_requested\')">Issue RA</button>'+
+      '<button class="btn btn-outlined" onclick="simAction(\''+c.claimId+'\',\'info_requested\')">Request Info</button></div>';
+  }
+  /* Void warranty button - available on any claim with an active registration */
+  if (regMatch && regMatch.status === 'active') {
+    html+='<div class="action-bar"><button class="btn btn-danger btn-outlined" style="border-color:var(--error);width:100%" onclick="showVoidModal(\''+regMatch.registrationId+'\',\''+c.claimId+'\')">'+
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>'+
+      'Void Warranty — '+regMatch.registrationId+'</button></div>';
+  }
+
+  if(c.timeline&&c.timeline.length) {
+    html+='<div class="timeline-card"><div class="tc-header">What happened</div>';
+    c.timeline.slice().reverse().forEach(function(ev){
+      html+='<div class="tl-entry"><div class="tl-dot"></div><div class="tl-content">'+
+        '<div class="tl-date">'+fmtDate(ev.date)+'</div><div class="tl-event">'+esc(ev.event)+'</div>'+
+        '<div class="tl-by">'+esc(ev.by)+'</div></div></div>';
+    });
+    html+='</div>';
+  }
+
+  el.innerHTML=html; el.scrollTop=0;
+}
+
+function df(label,value) { return '<div class="detail-field"><span class="df-label">'+label+'</span><span class="df-value">'+value+'</span></div>'; }
+
+function simAction(claimId, newStatus) {
+  var claim=DATA.claims.find(function(c){return c.claimId===claimId;});
+  if(!claim) claim=newClaims.find(function(c){return c.claimId===claimId;});
+  if(!claim) return;
+  claim.status=newStatus;
+  var today=new Date().toISOString().split('T')[0];
+  var msgs={approved:'Claim approved',rejected:'Claim rejected',sample_requested:'RA issued — return failed unit requested',info_requested:'Additional information requested'};
+  if(!claim.timeline) claim.timeline=[];
+  claim.timeline.push({date:today, event:msgs[newStatus]||'Status updated', by:'Warranty Team'});
+  if(newStatus==='approved'){claim.resolvedDate=today;claim.resolution='Approved by Warranty Team.';}
+  if(newStatus==='rejected'){claim.resolvedDate=today;claim.resolution='Rejected by Warranty Team.';}
+  showToast(msgs[newStatus]||'Status updated');
+  showMfgDetail(claimId);
+}
+
+function renderMfgAnalytics(el) {
+  var claims=getAllClaims();
+
+  /* --- Resolution Metrics --- */
+  var resolved=claims.filter(function(c){return c.resolvedDate&&c.claimDate;});
+  var avgDays=0;
+  if(resolved.length){var td=resolved.reduce(function(s,c){return s+(new Date(c.resolvedDate)-new Date(c.claimDate))/86400000;},0); avgDays=Math.round(td/resolved.length);}
+  var tc=claims.reduce(function(s,c){return s+(c.creditAmount||0);},0);
+  var openCnt=claims.filter(function(c){return c.status!=='approved'&&c.status!=='rejected';}).length;
+  var breachCnt=claims.filter(function(c){return getSlaInfo(c).cls==='sla-breach';}).length;
+
+  var html='<div class="section-label">Resolution Metrics</div>'+
+    '<div class="metric-row">'+
+    '<div class="metric-card"><div class="mc-icon" style="background:var(--info-bg)"><svg viewBox="0 0 24 24" fill="none" style="stroke:var(--info)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="mc-value">'+avgDays+'</div><div class="mc-label">Avg. Days to Resolve</div></div>'+
+    '<div class="metric-card"><div class="mc-icon" style="background:var(--success-bg)"><svg viewBox="0 0 24 24" fill="none" style="stroke:var(--success)" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="mc-value">'+fmtCur(tc)+'</div><div class="mc-label">Total Credits Issued</div></div>'+
+    '</div><div class="metric-row">'+
+    '<div class="metric-card"><div class="mc-icon" style="background:var(--warning-bg)"><svg viewBox="0 0 24 24" fill="none" style="stroke:var(--warning)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div><div class="mc-value">'+openCnt+'</div><div class="mc-label">Open Claims</div></div>'+
+    '<div class="metric-card"><div class="mc-icon" style="background:'+(breachCnt>0?'var(--error-bg)':'var(--success-bg)')+'"><svg viewBox="0 0 24 24" fill="none" style="stroke:'+(breachCnt>0?'var(--error)':'var(--success)')+'" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><div class="mc-value">'+breachCnt+'</div><div class="mc-label">SLA Breaches</div></div>'+
+    '</div>';
+
+  /* --- Monthly Trend Sparkline --- */
+  var monthCounts = {};
+  claims.forEach(function(c){
+    var d = c.claimDate.substring(0,7); /* "2026-02" */
+    monthCounts[d] = (monthCounts[d]||0) + 1;
+  });
+  /* Build 6-month range ending at latest claim month */
+  var allMonths = Object.keys(monthCounts).sort();
+  if (allMonths.length > 0) {
+    var last = allMonths[allMonths.length - 1];
+    var months = [];
+    for (var mi = 5; mi >= 0; mi--) {
+      var dt = new Date(last + '-15');
+      dt.setMonth(dt.getMonth() - mi);
+      var key = dt.getFullYear() + '-' + String(dt.getMonth()+1).padStart(2,'0');
+      months.push(key);
+    }
+    var vals = months.map(function(m){ return monthCounts[m]||0; });
+    var maxV = Math.max.apply(null, vals.concat([1]));
+    /* SVG sparkline area + line */
+    var w=300, h=60, padY=4;
+    var pts = vals.map(function(v,i){ return [Math.round(i/(vals.length-1)*w), Math.round(h - padY - (v/maxV)*(h-2*padY))]; });
+    var linePath = pts.map(function(p,i){ return (i===0?'M':'L')+p[0]+','+p[1]; }).join(' ');
+    var areaPath = linePath + ' L'+w+','+(h)+' L0,'+(h)+' Z';
+    var monthLabels = months.map(function(m){ var parts=m.split('-'); var names=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return names[parseInt(parts[1])-1]; });
+    /* Dots */
+    var dots = pts.map(function(p,i){ return vals[i]>0 ? '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="3" style="fill:var(--chart-1)"/>' : ''; }).join('');
+
+    html += '<div class="analytics-card"><h3>Claims Trend</h3><div class="chart-subtitle">Monthly claims filed — last 6 months</div>'+
+      '<div class="sparkline-wrap"><svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+
+      '<path d="'+areaPath+'" style="fill:var(--primary-light)"/>'+
+      '<path d="'+linePath+'" fill="none" style="stroke:var(--info)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'+
+      dots+
+      '</svg><div class="spark-months">'+monthLabels.map(function(l){ return '<span>'+l+'</span>'; }).join('')+'</div></div></div>';
+  }
+
+  /* --- Claims by Status — donut chart --- */
+  var statusColors = {
+    'Submitted': 'var(--status-submitted)',
+    'Under Review': 'var(--status-review)',
+    'RA Issued – Return Unit': 'var(--status-ra)',
+    'Info Requested': 'var(--status-info)',
+    'Approved': 'var(--status-approved)',
+    'Rejected': 'var(--status-rejected)'
+  };
+  var sc = {};
+  claims.forEach(function(c){ var s=statusLabel(c.status); sc[s]=(sc[s]||0)+1; });
+  var total = claims.length;
+  /* Build SVG donut */
+  var donutR=40, donutC=2*Math.PI*donutR, donutSvg='', offset=0;
+  var statusEntries = Object.entries(sc).sort(function(a,b){return b[1]-a[1];});
+  statusEntries.forEach(function(e){
+    var pct = e[1]/total;
+    var dashLen = pct * donutC;
+    var color = statusColors[e[0]] || 'var(--accent-neutral)';
+    donutSvg += '<circle cx="50" cy="50" r="'+donutR+'" fill="none" style="stroke:'+color+'" stroke-width="16" stroke-dasharray="'+dashLen+' '+(donutC-dashLen)+'" stroke-dashoffset="-'+offset+'" stroke-linecap="round"/>';
+    offset += dashLen;
+  });
+  var legend = statusEntries.map(function(e){ return '<div class="donut-legend-item"><span class="donut-dot" style="background:'+(statusColors[e[0]]||'var(--accent-neutral)')+'"></span><span>'+e[0]+'</span><span class="donut-legend-count">'+e[1]+'</span></div>'; }).join('');
+
+  html += '<div class="analytics-card"><h3>Claims by Status</h3><div class="chart-subtitle">Distribution of all '+total+' claims across workflow stages</div>'+
+    '<div class="donut-chart-wrap"><svg viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="'+donutR+'" fill="none" style="stroke:var(--surface-dim)" stroke-width="16"/>'+donutSvg+
+    '<text x="50" y="48" text-anchor="middle" font-size="16" font-weight="700" style="fill:var(--on-surface)">'+total+'</text><text x="50" y="60" text-anchor="middle" font-size="7" style="fill:var(--on-surface-muted)">total</text></svg>'+
+    '<div class="donut-legend">'+legend+'</div></div></div>';
+
+  /* --- Claims by Failure Type — colored bars --- */
+  var failureColors = ['var(--chart-1)','var(--chart-2)','var(--chart-3)','var(--chart-4)','var(--chart-5)','var(--chart-6)','var(--chart-7)','var(--chart-8)','var(--chart-9)','var(--chart-10)'];
+  var fc = {};
+  claims.forEach(function(c){ fc[c.failureType]=(fc[c.failureType]||0)+1; });
+  var mf=Math.max.apply(null,Object.values(fc).concat([1]));
+  html += '<div class="analytics-card"><h3>Claims by Failure Type</h3><div class="chart-subtitle">Which failure modes are generating the most claims</div>'+barChart(fc,mf,failureColors)+'</div>';
+
+  /* --- Claims by Distributor — colored bars with full names --- */
+  var distColors = ['var(--chart-1)','var(--chart-2)','var(--chart-3)','var(--chart-4)'];
+  var dc = {};
+  claims.forEach(function(c){ var d=getDist(c.distributorId); var n=d?esc(d.name):c.distributorId; dc[n]=(dc[n]||0)+1; });
+  var md=Math.max.apply(null,Object.values(dc).concat([1]));
+  html += '<div class="analytics-card"><h3>Claims by Contractor</h3><div class="chart-subtitle">Claim volume per contractor account</div>'+barChart(dc,md,distColors)+'</div>';
+
+  /* --- Lot-Level Risk --- */
+  var lotMap = {};
+  claims.forEach(function(c){
+    if(!lotMap[c.lotNumber]) lotMap[c.lotNumber] = { lot: c.lotNumber, count: 0, partNumber: c.partNumber, claims: [] };
+    lotMap[c.lotNumber].count++;
+    lotMap[c.lotNumber].claims.push(c);
+  });
+  var lots = Object.values(lotMap).sort(function(a,b){ return b.count - a.count; });
+  html += '<div class="analytics-card"><h3>Date-Code Risk Monitor</h3><div class="chart-subtitle">Manufacturing lots with active claims — multiple claims on one date code may signal a batch defect</div>';
+  lots.forEach(function(l){
+    var prod = getProd(l.partNumber);
+    var pName = prod ? esc(prod.name) : l.partNumber;
+    var riskCls = l.count >= 2 ? 'risk-elevated' : 'risk-normal';
+    var riskText = l.count >= 2 ? 'ELEVATED' : 'NORMAL';
+    html += '<div class="lot-risk-row"><div class="lot-risk-left"><div class="lot-risk-lot">'+l.lot+'</div><div class="lot-risk-product">'+pName+'</div></div>'+
+      '<div class="lot-risk-right"><span class="lot-risk-count">'+l.count+'</span><span class="risk-level '+riskCls+'">'+riskText+'</span></div></div>';
+  });
+  html += '</div>';
+
+  /* --- Warranty Expiry Tracking --- */
+  var allRegs = getAllRegistrations();
+  if (allRegs.length) {
+    var today = new Date();
+    var d90 = new Date(today); d90.setDate(d90.getDate() + 90);
+    var d180 = new Date(today); d180.setDate(d180.getDate() + 180);
+    var d365 = new Date(today); d365.setDate(d365.getDate() + 365);
+    var exp90=0, exp180=0, exp365=0, expTotal=0, voided=0;
+    allRegs.forEach(function(r){
+      if (r.status === 'voided') { voided++; return; }
+      var ex = new Date(r.warrantyExpiry + 'T00:00:00');
+      if (ex <= today) { expTotal++; return; }
+      if (ex <= d90) exp90++;
+      else if (ex <= d180) exp180++;
+      else if (ex <= d365) exp365++;
+    });
+    html += '<div class="analytics-card"><h3>Warranty Expiry Tracking</h3><div class="chart-subtitle">Registered warranties approaching expiration across all distributors</div>'+
+      '<div class="expiry-bucket"><span class="eb-label">Expiring in 90 days</span><span class="eb-count">'+exp90+'</span><span class="eb-badge eb-urgent">URGENT</span></div>'+
+      '<div class="expiry-bucket"><span class="eb-label">Expiring in 91–180 days</span><span class="eb-count">'+exp180+'</span><span class="eb-badge eb-warning">WATCH</span></div>'+
+      '<div class="expiry-bucket"><span class="eb-label">Expiring in 181–365 days</span><span class="eb-count">'+exp365+'</span><span class="eb-badge eb-info">PLAN</span></div>'+
+      '<div class="expiry-bucket"><span class="eb-label">Already Expired</span><span class="eb-count">'+expTotal+'</span><span class="eb-badge" style="background:var(--error-bg);color:var(--error)">EXPIRED</span></div>'+
+      '<div class="expiry-bucket"><span class="eb-label">Voided</span><span class="eb-count">'+voided+'</span><span class="eb-badge" class="wl-voided">VOIDED</span></div>';
+
+    /* Show list of warranties expiring soonest */
+    var upcoming = allRegs.filter(function(r){
+      if (r.status==='voided') return false;
+      var ex = new Date(r.warrantyExpiry+'T00:00:00');
+      return ex > today && ex <= d365;
+    }).sort(function(a,b){ return a.warrantyExpiry.localeCompare(b.warrantyExpiry); }).slice(0,5);
+    if (upcoming.length) {
+      html += '<div style="margin-top:12px;font-size:12px;font-weight:600;color:var(--on-surface-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px">Soonest Expirations</div>';
+      upcoming.forEach(function(r){
+        var ws = getWarrantyStatus(r);
+        var dist = getDist(r.distributorId);
+        html += '<div class="lot-risk-row"><div class="lot-risk-left"><div class="lot-risk-lot">'+r.registrationId+'</div>'+
+          '<div class="lot-risk-product">'+(dist?esc(dist.name):r.distributorId)+' — '+esc(r.endCustomer)+'</div></div>'+
+          '<div class="lot-risk-right"><span style="font-size:12px;color:var(--on-surface-variant)">'+fmtDate(r.warrantyExpiry)+'</span>'+
+          '<span class="status-chip '+ws.cls+'" style="font-size:10px">'+ws.label+'</span></div></div>';
+      });
+    }
+    html += '</div>';
+
+    /* Warranty registration summary */
+    var activeRegs = allRegs.filter(function(r){ return r.status !== 'voided' && new Date(r.warrantyExpiry+'T00:00:00') > today; });
+    var totalUnits = allRegs.reduce(function(s,r){ return s + r.quantityRegistered; }, 0);
+    html += '<div class="metric-row">'+
+      '<div class="metric-card"><div class="mc-icon" style="background:var(--info-bg)"><svg viewBox="0 0 24 24" fill="none" style="stroke:var(--info)" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="mc-value">'+allRegs.length+'</div><div class="mc-label">Total Registrations</div></div>'+
+      '<div class="metric-card"><div class="mc-icon" style="background:var(--success-bg)"><svg viewBox="0 0 24 24" fill="none" style="stroke:var(--success)" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div class="mc-value">'+totalUnits.toLocaleString()+'</div><div class="mc-label">Units Under Warranty</div></div></div>';
+  }
+
+  el.innerHTML=html; el.scrollTop=0;
+}
+
+function barChart(data, max, colors) {
+  var html='', idx=0;
+  Object.entries(data).sort(function(a,b){return b[1]-a[1];}).forEach(function(e){
+    var color = colors ? colors[idx % colors.length] : 'var(--chart-1)';
+    html+='<div class="bar-row"><span class="bar-label">'+e[0]+'</span><div class="bar-track"><div class="bar-fill" style="width:'+Math.round(e[1]/max*100)+'%;background:'+color+'"></div></div><span class="bar-count">'+e[1]+'</span></div>';
+    idx++;
+  });
+  return html;
+}
+
+/* ===== DISTRIBUTOR ===== */
+function switchDistTab(tab) {
+  currentDistTab=tab;
+  var btns=document.querySelectorAll('#distNav button');
+  for(var i=0;i<btns.length;i++) btns[i].classList.toggle('active',btns[i].getAttribute('data-tab')===tab);
+  var mc=document.getElementById('mainContent');
+  if(tab==='home') renderDistHome(mc);
+  else if(tab==='lookup') renderDistLookup(mc);
+  else if(tab==='newclaim') renderDistNewClaim(mc);
+  else if(tab==='register') renderDistRegister(mc);
+  else if(tab==='history') renderDistHistory(mc);
+}
+
+function renderDistHome(el) {
+  var distId=currentUser.distId;
+  var claims=getAllClaims().filter(function(c){return c.distributorId===distId;});
+  var open=claims.filter(function(c){return c.status!=='approved'&&c.status!=='rejected';});
+  var resolved=claims.filter(function(c){return c.status==='approved'||c.status==='rejected';});
+  var dist=getDist(distId);
+  var orders=DATA.orders.filter(function(o){return o.distributorId===distId;});
+
+  var distRegs = getAllRegistrations().filter(function(r){ return r.distributorId === distId; });
+  var activeRegs = distRegs.filter(function(r){ var ws=getWarrantyStatus(r); return ws.status==='active'||ws.status==='expiring_soon'; });
+
+  var html='<div class="section-label">Your claims</div>'+
+    '<div class="stat-row">'+tile(claims.length,'Total Claims','var(--chart-1)')+tile(open.length,'Open','var(--chart-2)')+
+    tile(activeRegs.length,'Active Warranties','var(--chart-2)')+tile(orders.length,'Orders on File','var(--accent-neutral)')+'</div>';
+
+  if (isClassic()) {
+    if (claims.length) {
+      html+='<div class="section-label">All Claims</div>';
+      html+=claimTableDist(claims,'showDistDetail');
+    } else {
+      html+='<div class="empty-state">No claims on file. Your fixtures are behaving.</div>';
+    }
+  } else {
+    if(open.length){
+      html+='<div class="section-label">Open claims</div><div class="list-container">'+listHeader();
+      open.sort(function(a,b){return b.claimDate.localeCompare(a.claimDate);}).forEach(function(c){ html+=claimRow(c,false,'showDistDetail'); });
+      html+='</div>';
+    }
+    if(resolved.length){
+      html+='<div class="section-label">Decided</div><div class="list-container">'+listHeader();
+      resolved.sort(function(a,b){return b.claimDate.localeCompare(a.claimDate);}).forEach(function(c){
+        var prod=getProd(c.partNumber);
+        html+='<div class="list-row" onclick="showDistDetail(\''+c.claimId+'\')">'+
+          '<div class="lr-main"><div class="lr-id">'+c.claimId+'</div>'+
+          '<div class="lr-product">'+(prod?esc(prod.name):c.partNumber)+'</div>'+
+          '<div class="lr-date">'+fmtDate(c.claimDate)+' · '+esc(c.failureType)+'</div></div>'+
+          '<div class="lr-right"><div class="status-chip status-'+c.status+'">'+statusLabel(c.status)+'</div>'+
+          (c.creditAmount?'<div class="severity-text">'+fmtCur(c.creditAmount)+'</div>':'')+'</div></div>';
+      });
+      html+='</div>';
+    }
+    if(!claims.length) html+='<div class="empty-state">No claims on file. Your fixtures are behaving.</div>';
+  }
+  el.innerHTML=html; el.scrollTop=0;
+}
+
+function showDistDetail(claimId) {
+  var c=getAllClaims().find(function(x){return x.claimId===claimId;});
+  if(!c) return;
+  var prod=getProd(c.partNumber);
+  var el=document.getElementById('mainContent');
+  var html='<button class="detail-back" onclick="switchDistTab(\''+currentDistTab+'\')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back</button>';
+
+  html+='<div class="detail-card"><div class="detail-card-header">Claim '+c.claimId+'</div><div class="detail-card-body">'+
+    df('Status','<span class="status-chip status-'+c.status+'">'+statusLabel(c.status)+'</span>')+
+    df('Severity','<span class="severity-text sev-'+c.severity+'">'+sevLabel(c.severity)+'</span>')+
+    df('Claim Date',fmtDate(c.claimDate))+
+    (c.claimSource?df('Source',sourceChipHtml(c.claimSource)):'')+
+    '</div></div>';
+
+  /* Warranty status for distributor detail view */
+  var distRegMatch = getAllRegistrations().find(function(r){ return r.lotNumber === c.lotNumber && r.distributorId === c.distributorId; });
+  if (distRegMatch) {
+    var dws = getWarrantyStatus(distRegMatch);
+    html+='<div class="warranty-card '+(dws.status==='active'||dws.status==='expiring_soon'?'active':'expired')+'">'+
+      '<div class="wc-status">WARRANTY '+dws.label+'</div>'+
+      '<div class="wc-detail">'+esc(distRegMatch.endCustomer)+' — Expires '+fmtDate(distRegMatch.warrantyExpiry)+'</div></div>';
+  }
+
+  if(prod){
+    html+='<div class="detail-card"><div class="detail-card-header">Product</div><div class="detail-card-body">'+
+      df('Name',esc(prod.name))+df('Catalog #','<span style="font-family:var(--mono)">'+prod.partNumber+'</span>')+
+      '</div><div style="padding:0 16px 12px"><div class="cert-badges">'+prod.certifications.map(function(x){return '<span class="cert-badge">'+esc(x)+'</span>';}).join('')+'</div></div></div>';
+  }
+
+  html+='<div class="detail-card"><div class="detail-card-header">Details</div><div class="detail-card-body">'+
+    df('Order','<span style="font-family:var(--mono)">'+c.orderId+'</span>')+
+    df('Date Code','<span style="font-family:var(--mono)">'+c.lotNumber+'</span>')+
+    df('Quantity',c.quantityAffected.toLocaleString())+df('What failed',esc(c.failureType))+
+    '</div><div class="detail-desc">'+esc(c.description)+'</div></div>';
+
+  if(c.resolution){
+    html+='<div class="detail-card"><div class="detail-card-header">Decision</div><div class="detail-desc">'+esc(c.resolution)+'</div>'+
+      (c.creditAmount!=null?'<div class="detail-card-body">'+df('Credit',fmtCur(c.creditAmount))+'</div>':'')+'</div>';
+  }
+
+  if(c.timeline&&c.timeline.length){
+    html+='<div class="timeline-card"><div class="tc-header">What happened</div>';
+    c.timeline.slice().reverse().forEach(function(ev){
+      html+='<div class="tl-entry"><div class="tl-dot"></div><div class="tl-content">'+
+        '<div class="tl-date">'+fmtDate(ev.date)+'</div><div class="tl-event">'+esc(ev.event)+'</div>'+
+        '<div class="tl-by">'+esc(ev.by)+'</div></div></div>';
+    });
+    html+='</div>';
+  }
+  el.innerHTML=html; el.scrollTop=0;
+}
+
+/* Look up (generalized, v2.0): heading, search with icon, DEMO card of preset searches.
+   Presets, hint, spec labels and wording come from DATA.ui (the niche pack), so the same
+   code serves any trade. Matching ignores dashes and spaces; every preset returns results. */
+function lk() { return (typeof DATA !== 'undefined' && DATA && DATA.ui) || {}; }
+var TF_SEARCH_ICON = "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6\"/><path d=\"M15 15l5.5 5.5\"/></svg>";
+
+function renderDistLookup(el) {
+  var groups = (lk().lookupPresets || []).map(function (g) {
+    return '<div class="tfl-group-label">' + g[0] + '</div><div class="tfl-chips">' +
+      g[2].map(function (v) {
+        return '<button type="button" class="tfl-chip' + (g[1] ? ' tfl-mono' : '') + '" data-q="' + esc(v) + '">' + esc(v) + '</button>';
+      }).join('') + '</div>';
+  }).join('');
+  el.innerHTML =
+    '<div class="tfl">' +
+      '<h2 class="tfl-title">What are you looking for?</h2>' +
+      '<div class="tfl-search">' + TF_SEARCH_ICON +
+        '<input class="search-input" id="lookupInput" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" ' +
+        'placeholder="Catalog number or description" aria-describedby="tflHint" oninput="doLookup()">' +
+        '<button type="button" class="tfl-clear" id="lookupClear" aria-label="Clear search" hidden>&times;</button>' +
+      '</div>' +
+      '<div class="tfl-hint" id="tflHint">'+esc(lk().lookupHint||'')+'</div>' +
+      '<div class="tfl-card" id="lookupPresets">' +
+        '<div class="tfl-card-head"><span class="tf-demo">DEMO</span><b>Try one of these</b></div>' +
+        '<div class="tfl-card-note">This is a demonstration catalog. Every one of these returns results.</div>' +
+        groups +
+      '</div>' +
+      '<div id="lookupResults"></div>' +
+    '</div>';
+  el.scrollTop = 0;
+  var inp = document.getElementById('lookupInput');
+  el.querySelectorAll('.tfl-chip').forEach(function (b) {
+    b.addEventListener('click', function () { inp.value = b.getAttribute('data-q'); doLookup(); inp.focus(); });
+  });
+  document.getElementById('lookupClear').addEventListener('click', function () { inp.value = ''; doLookup(); inp.focus(); });
+  setTimeout(function () { if (inp && window.matchMedia('(hover:hover)').matches) inp.focus(); }, 100);
+}
+
+function tfNorm(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]/g, ''); }
+
+function tfMatches(q) {
+  var qn = tfNorm(q);
+  if (!qn) return [];
+  var words = q.toLowerCase().split(/[\s,\/]+/).map(tfNorm).filter(Boolean);
+  var watt = lk().unitSearch ? q.match(/^\s*(\d{2,3})\s*w\s*$/i) : null;
+  var hits = DATA.products.filter(function (p) {
+    if (watt) return String(p.awg).split(/[^0-9]+/).indexOf(watt[1]) !== -1;
+    if (tfNorm(p.partNumber).indexOf(qn) !== -1) return true;
+    var hay = tfNorm([p.name, p.category, p.description, p.awg, (p.applications || []).join(' '), (p.certifications || []).join(' ')].join(' '));
+    return words.every(function (w) { return hay.indexOf(w) !== -1; });
+  });
+  /* catalog-number hits first, exact match on top */
+  function rank(p) { var n = tfNorm(p.partNumber); return n === qn ? 0 : n.indexOf(qn) === 0 ? 1 : n.indexOf(qn) !== -1 ? 2 : 3; }
+  return hits.map(function (p, i) { return [rank(p), i, p]; }).sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).map(function (x) { return x[2]; });
+}
+
+function doLookup() {
+  var raw = document.getElementById('lookupInput').value || '';
+  var q = raw.trim();
+  var r = document.getElementById('lookupResults');
+  var presets = document.getElementById('lookupPresets');
+  var clr = document.getElementById('lookupClear');
+  if (clr) clr.hidden = !raw;
+  if (presets) presets.hidden = !!q;
+  if (!q) { r.innerHTML = ''; return; }
+  var matches = tfMatches(q);
+  if (!matches.length) { r.innerHTML = '<div class="empty-state">No '+esc(lk().itemWord||'product')+' matches that. Check the catalog number on the label'+(lk().catalogPrefix?'; it starts with '+esc(lk().catalogPrefix):'')+'.</div>'; return; }
+  var html = '<div class="tfl-count">' + matches.length + (matches.length === 1 ? ' '+(lk().itemWord||'product') : ' '+(lk().itemsWord||'products')) + ' for “' + esc(q) + '”</div>';
+  matches.forEach(function (p) {
+    /* warranty registrations for this product by the current contractor */
+    var prodRegs = getAllRegistrations().filter(function (r) { return r.partNumber === p.partNumber && r.distributorId === currentUser.distId; });
+    var regHtml = '';
+    if (prodRegs.length) {
+      regHtml = '<div style="padding:8px 16px 12px;border-top:1px solid var(--outline-variant)"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--on-surface-muted);margin-bottom:6px">Your registrations</div>';
+      prodRegs.forEach(function (r) {
+        var ws = getWarrantyStatus(r);
+        regHtml += '<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:12px">' +
+          '<span style="color:var(--on-surface-variant)">' + esc(r.endCustomer) + ' — ' + r.quantityRegistered.toLocaleString() + ' units</span>' +
+          '<span class="status-chip ' + ws.cls + '" style="font-size:10px">' + ws.label + '</span></div>';
+      });
+      regHtml += '</div>';
+    }
+    html += '<div class="product-card"><div class="pc-header"><div class="pc-name">' + esc(p.name) + '</div>' +
+      '<div class="pc-part">' + p.partNumber + ' — ' + esc(p.category) + '</div>' +
+      '<div class="cert-badges">' + p.certifications.map(function (c) { return '<span class="cert-badge">' + esc(c) + '</span>'; }).join('') + '</div></div>' +
+      '<div class="pc-specs">' +
+      specItem((lk().specLabels||[])[0]||'Size', p.awg) + specItem((lk().specLabels||[])[1]||'Rating', p.tempRating) + specItem((lk().specLabels||[])[2]||'Voltage', p.voltageRating) + specItem('Warranty', p.warrantyYears + ' years') +
+      '</div><div class="pc-warranty">' + esc(p.warrantyTerms) + '</div>' + regHtml + '</div>';
+  });
+  r.innerHTML = html;
+}
+
+function specItem(label,value) { return '<div class="pc-spec-item"><span class="ps-label">'+label+'</span><span class="ps-value">'+value+'</span></div>'; }
+
+/* NEW CLAIM */
+var selOrder=null, selItem=null;
+
+function renderDistNewClaim(el) {
+  selOrder=null; selItem=null;
+  var distId=currentUser.distId;
+  var orders=DATA.orders.filter(function(o){return o.distributorId===distId;});
+  var html='<div class="section-label">File a claim</div>'+
+    '<div class="form-section"><div class="form-card"><div class="form-group"><label>Order</label><select id="claimOrder" onchange="onOrderSelect()">'+
+    '<option value="">Choose the order</option>';
+  orders.forEach(function(o){ html+='<option value="'+o.orderId+'">'+o.orderId+' — '+fmtDate(o.date)+'</option>'; });
+  html+='</select></div></div></div><div id="claimProductSection"></div><div id="claimFormSection"></div>';
+  el.innerHTML=html; el.scrollTop=0;
+}
+
+function onOrderSelect() {
+  var orderId=document.getElementById('claimOrder').value;
+  selItem=null;
+  if(!orderId){document.getElementById('claimProductSection').innerHTML='';document.getElementById('claimFormSection').innerHTML='';return;}
+  selOrder=getOrder(orderId);
+  if(!selOrder) return;
+  var html='<div class="form-section"><div class="form-card"><div class="form-group"><label>Fixture</label><select id="claimProduct" onchange="onProductSelect()">'+
+    '<option value="">Choose the fixture</option>';
+  selOrder.items.forEach(function(item,idx){
+    var prod=getProd(item.partNumber);
+    html+='<option value="'+idx+'">'+(prod?esc(prod.name):item.partNumber)+' — '+item.partNumber+' (Date code: '+item.lotNumber+')</option>';
+  });
+  html+='</select></div></div></div>';
+  document.getElementById('claimProductSection').innerHTML=html;
+  document.getElementById('claimFormSection').innerHTML='';
+}
+
+function onProductSelect() {
+  var idx=document.getElementById('claimProduct').value;
+  if(idx===''){document.getElementById('claimFormSection').innerHTML='';return;}
+  selItem=selOrder.items[parseInt(idx)];
+  var prod=getProd(selItem.partNumber);
+  if(!prod) return;
+  var orderDate=new Date(selOrder.date), expiryDate=new Date(orderDate);
+  expiryDate.setFullYear(expiryDate.getFullYear()+prod.warrantyYears);
+  var isActive=new Date()<=expiryDate;
+  var expiryStr=fmtDate(expiryDate.toISOString().split('T')[0]);
+
+  /* Check if there's a warranty registration for this lot */
+  var lotReg = getAllRegistrations().find(function(r){ return r.lotNumber === selItem.lotNumber && r.distributorId === currentUser.distId; });
+  var wStatus = null;
+  if (lotReg) {
+    wStatus = getWarrantyStatus(lotReg);
+    var wCardCls = (wStatus.status==='active'||wStatus.status==='expiring_soon') ? 'active' : 'expired';
+    var html='<div class="warranty-card '+wCardCls+'">'+
+      '<div class="wc-status">WARRANTY '+wStatus.label+'</div>'+
+      '<div class="wc-detail">'+esc(lotReg.endCustomer)+' — Registered '+fmtDate(lotReg.registrationDate)+' · Expires '+fmtDate(lotReg.warrantyExpiry)+'</div></div>';
+  } else {
+    var html='<div class="warranty-card '+(isActive?'active':'expired')+'">'+
+      '<div class="wc-status">'+(isActive?'WARRANTY ACTIVE':'WARRANTY EXPIRED')+'</div>'+
+      '<div class="wc-detail">'+esc(prod.name)+' — '+prod.warrantyYears+'-year warranty · Expires '+expiryStr+'</div>'+
+      '<div class="cert-badges" style="margin-top:6px">'+prod.certifications.map(function(c){return '<span class="cert-badge">'+esc(c)+'</span>';}).join('')+'</div></div>';
+  }
+
+  /* Block claims on expired or voided warranties */
+  if (wStatus && (wStatus.status === 'expired' || wStatus.status === 'voided')) {
+    html += '<div style="padding:24px 20px;text-align:center"><div class="tf-block-i"></div>' +
+      '<div style="font-size:15px;font-weight:500;color:var(--on-surface);margin-bottom:6px">This fixture can’t be claimed</div>' +
+      '<div style="font-size:13px;color:var(--on-surface-variant);line-height:1.5">This warranty is <strong>'+wStatus.label.toLowerCase()+'</strong>.' +
+      (wStatus.status==='voided' ? ' The warranty was voided by the manufacturer. Contact your Tessford representative for details.' : ' The warranty period has passed. Expired fixtures may still qualify for a goodwill credit. Ask your Tessford rep.') +
+      '</div></div>';
+    document.getElementById('claimFormSection').innerHTML = html;
+    return;
+  }
+
+  html+='<div class="form-section"><div class="form-card">'+
+    '<div class="form-row"><div class="form-group"><label>How many failed ('+prod.unitOfMeasure+')</label><input type="number" id="claimQty" placeholder="e.g. 4" min="1" max="'+selItem.quantity+'"></div>'+
+    '<div class="form-group"><label>Severity</label><select id="claimSeverity"><option value="">Choose</option>'+
+    DATA.severityLevels.map(function(s){return '<option value="'+s.level+'">'+esc(s.label)+'</option>';}).join('')+'</select></div></div>'+
+    '<div class="form-group"><label>What failed</label><select id="claimFailure"><option value="">Choose</option>'+
+    DATA.failureTypes.map(function(f){return '<option value="'+f+'">'+f+'</option>';}).join('')+'</select></div>'+
+    '<div class="form-group"><label>What you see</label><textarea id="claimDesc" placeholder="e.g. Dead at full output since Monday. 32 ft mounting, conditioned warehouse."></textarea></div>'+
+    '</div></div>';
+
+  html+='<div class="photo-upload"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><br>Add a nameplate photo: catalog number and date code<br><span style="font-size:11px;opacity:0.7">(Demo: nothing uploads in this sample)</span></div>';
+
+  html+='<div style="padding:0 20px 28px"><button class="btn btn-primary" style="width:100%;padding:14px;font-size:15px;border-radius:var(--radius-sm)" onclick="submitClaim()">File claim</button></div>';
+  document.getElementById('claimFormSection').innerHTML=html;
+}
+
+function submitClaim() {
+  var qty=parseInt((document.getElementById('claimQty')||{}).value);
+  var failure=(document.getElementById('claimFailure')||{}).value;
+  var severity=(document.getElementById('claimSeverity')||{}).value;
+  var desc=(document.getElementById('claimDesc')||{}).value;
+  if(!qty||!failure||!severity||!desc){showToast('Add how many failed, severity, what failed and what you see.');return;}
+  if(!selOrder||!selItem) return;
+  var today=new Date().toISOString().split('T')[0];
+  var claimId='WC-'+String(1049+newClaims.length);
+  var prod=getProd(selItem.partNumber);
+  var sev=DATA.severityLevels.find(function(s){return s.level===severity;});
+  newClaims.push({claimId:claimId,distributorId:currentUser.distId,orderId:selOrder.orderId,
+    partNumber:selItem.partNumber,lotNumber:selItem.lotNumber,quantityAffected:qty,
+    status:'pending',severity:severity,failureType:failure,description:desc,
+    environment:'',installDate:null,claimDate:today,assignedTo:null,resolution:null,
+    creditAmount:null,sampleRequested:false,sampleReceived:false,sampleReceivedDate:null,resolvedDate:null,
+    timeline:[{date:today,event:'Claim submitted',by:currentUser.name}]});
+
+  var mc=document.getElementById('mainContent');
+  mc.innerHTML='<div class="success-msg"><div class="sm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>'+
+    '<h2>Claim filed</h2><div class="sm-id">'+claimId+'</div>'+
+    '<p>'+(prod?esc(prod.name):selItem.partNumber)+'<br>Date code: '+selItem.lotNumber+'<br>'+
+    esc(failure)+' · '+qty.toLocaleString()+' '+(prod?prod.unitOfMeasure:'units')+'</p>'+
+    '<p style="margin-top:12px;color:var(--on-surface-muted)">Answer within: '+(sev?sev.sla:'')+'</p>'+
+    '<div style="margin-top:24px"><button class="btn btn-primary" style="padding:12px 32px" onclick="switchDistTab(\'home\')">Back to your claims</button></div></div>';
+  mc.scrollTop=0;
+}
+
+function renderDistHistory(el) {
+  var distId=currentUser.distId;
+  var claims=getAllClaims().filter(function(c){return c.distributorId===distId;});
+  var sorted=claims.slice().sort(function(a,b){return b.claimDate.localeCompare(a.claimDate);});
+  var html='<div class="section-label">Your claims</div>';
+  if(!sorted.length){html+='<div class="empty-state">No claims on file.</div>';}
+  else if (isClassic()) {
+    html+=claimTableDist(sorted,'showDistDetail');
+  } else {
+    html+='<div class="list-container">'+listHeader();
+    sorted.forEach(function(c){
+      var prod=getProd(c.partNumber);
+      html+='<div class="list-row" onclick="showDistDetail(\''+c.claimId+'\')">'+
+        '<div class="lr-main"><div class="lr-id">'+c.claimId+'</div>'+
+        '<div class="lr-product">'+(prod?esc(prod.name):c.partNumber)+'</div>'+
+        '<div class="lr-date">'+fmtDate(c.claimDate)+' · '+esc(c.failureType)+'</div></div>'+
+        '<div class="lr-right"><div class="status-chip status-'+c.status+'">'+statusLabel(c.status)+'</div>'+
+        (c.creditAmount?'<div class="severity-text">'+fmtCur(c.creditAmount)+'</div>':'')+'</div></div>';
+    });
+    html+='</div>';
+  }
+  el.innerHTML=html; el.scrollTop=0;
+}
+
+/* ===== WARRANTY REGISTRATION (DISTRIBUTOR) ===== */
+var selRegOrder = null, selRegItem = null;
+
+function renderDistRegister(el) {
+  var distId = currentUser.distId;
+  var regs = getAllRegistrations().filter(function(r){ return r.distributorId === distId; });
+  var html = '<div class="section-label">Registered jobs</div>';
+
+  html += '<div style="padding:0 20px 12px"><button class="btn btn-primary" style="width:100%;padding:12px;font-size:14px;border-radius:var(--radius-sm)" onclick="showRegForm()">'+
+    '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px;margin-right:6px"><path d="M12 4v16m8-8H4"/></svg>'+
+    'Register a job</button></div>';
+
+  if (!regs.length) {
+    html += '<div class="empty-state">No warranty registrations yet.<br>Register installations to activate warranty coverage.</div>';
+  } else if (isClassic()) {
+    regs.sort(function(a,b){ return b.registrationDate.localeCompare(a.registrationDate); });
+    html += regTableDist(regs, 'showRegDetail');
+  } else {
+    regs.sort(function(a,b){ return b.registrationDate.localeCompare(a.registrationDate); });
+    regs.forEach(function(r){
+      var ws = getWarrantyStatus(r);
+      var prod = getProd(r.partNumber);
+      html += '<div class="reg-card" onclick="showRegDetail(\''+r.registrationId+'\')">'+
+        '<div class="reg-header"><span class="reg-id">'+r.registrationId+'</span>'+
+        '<span class="status-chip '+ws.cls+'">'+ws.label+'</span></div>'+
+        '<div class="reg-customer">'+esc(r.endCustomer)+'</div>'+
+        '<div class="reg-project">'+esc(r.projectName||'')+'</div>'+
+        '<div class="reg-meta"><span>'+(prod?esc(prod.name):r.partNumber)+'</span>'+
+        '<span>'+r.quantityRegistered.toLocaleString()+' '+(prod?prod.unitOfMeasure:'units')+'</span>'+
+        '<span>Exp: '+fmtDate(r.warrantyExpiry)+'</span></div></div>';
+    });
+  }
+  el.innerHTML = html; el.scrollTop = 0;
+}
+
+function showRegDetail(regId) {
+  var r = getAllRegistrations().find(function(x){ return x.registrationId === regId; });
+  if (!r) return;
+  var ws = getWarrantyStatus(r);
+  var prod = getProd(r.partNumber);
+  var dist = getDist(r.distributorId);
+  var el = document.getElementById('mainContent');
+
+  var html = '<button class="detail-back" onclick="switchDistTab(\'register\')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back</button>';
+
+  html += '<div class="warranty-card '+(ws.status==='active'||ws.status==='expiring_soon'?'active':'expired')+'">'+
+    '<div class="wc-status">WARRANTY '+ws.label+'</div>'+
+    '<div class="wc-detail">'+esc(r.endCustomer)+' — '+fmtDate(r.warrantyExpiry)+'</div></div>';
+
+  html += '<div class="detail-card"><div class="detail-card-header">Registration '+r.registrationId+'</div><div class="detail-card-body">'+
+    df('Status','<span class="status-chip '+ws.cls+'">'+ws.label+'</span>')+
+    df('Registration Date',fmtDate(r.registrationDate))+
+    df('Order','<span style="font-family:var(--mono)">'+r.orderId+'</span>')+
+    df('Product',(prod?esc(prod.name):r.partNumber))+
+    df('Part Number','<span style="font-family:var(--mono)">'+r.partNumber+'</span>')+
+    df('Date Code','<span style="font-family:var(--mono)">'+r.lotNumber+'</span>')+
+    df('Quantity',r.quantityRegistered.toLocaleString()+' '+(prod?prod.unitOfMeasure:'units'))+
+    '</div></div>';
+
+  var envLabelsDetail = { dry_indoor:'Dry Location (Indoor)', wet_underground:'Wet Location (Outdoor)', hazardous_industrial:'Hazardous / Industrial' };
+  var envChipHtml = '';
+  if (r.environment) {
+    var ecCls = r.environment === 'dry_indoor' ? 'env-dry' : r.environment === 'wet_underground' ? 'env-wet' : 'env-hazardous';
+    envChipHtml = df('Environment','<span class="env-chip '+ecCls+'">'+(envLabelsDetail[r.environment]||r.environment)+'</span>');
+  }
+
+  html += '<div class="detail-card"><div class="detail-card-header">Installation</div><div class="detail-card-body">'+
+    df('End Customer',esc(r.endCustomer))+
+    df('Project',esc(r.projectName||'—'))+
+    df('Site Address',esc(r.siteAddress||'—'))+
+    envChipHtml+
+    df('Install Date',fmtDate(r.installDate))+
+    df('Warranty Expires',fmtDate(r.warrantyExpiry))+
+    '</div></div>';
+
+  if (r.necCompliance || r.installCompliance) {
+    html += '<div class="detail-card"><div class="detail-card-header">Compliance Certifications</div><div class="detail-card-body">';
+    if (r.necCompliance) html += df('NEC Compliance','<span style="color:var(--success)">✓ Certified</span>');
+    if (r.installCompliance) html += df('Install Instructions / Rated Limits','<span style="color:var(--success)">✓ Certified</span>');
+    html += '</div></div>';
+  }
+
+  if (r.notes) {
+    html += '<div class="detail-card"><div class="detail-card-header">Notes</div><div class="detail-desc">'+esc(r.notes)+'</div></div>';
+  }
+
+  if (ws.status === 'voided') {
+    html += '<div class="detail-card" style="border-left:4px solid var(--error)"><div class="detail-card-header" style="color:var(--error)">Warranty Voided</div><div class="detail-card-body">'+
+      df('Void Date',fmtDate(r.voidDate))+
+      df('Voided By',esc(r.voidedBy||'—'))+
+      '</div><div class="detail-desc" style="color:var(--error)">'+esc(r.voidReason||'—')+'</div></div>';
+  }
+
+  el.innerHTML = html; el.scrollTop = 0;
+}
+
+var regStep = 1; /* 1=order/product, 2=site+install, 3=confirm */
+
+function regStepperHtml(step) {
+  var steps = ['Order & Product','Site & Installation','Review & Submit'];
+  var html = '<div class="reg-stepper">';
+  steps.forEach(function(s,i) {
+    var cls = (i+1) < step ? 'done' : (i+1) === step ? 'active' : '';
+    html += '<div class="reg-step '+cls+'"><div class="rs-bar"></div><div class="rs-label">'+s+'</div></div>';
+  });
+  return html + '</div>';
+}
+
+function showRegForm() {
+  selRegOrder = null; selRegItem = null; regStep = 1;
+  var distId = currentUser.distId;
+  var orders = DATA.orders.filter(function(o){ return o.distributorId === distId; });
+  var el = document.getElementById('mainContent');
+
+  var html = '<button class="detail-back" onclick="switchDistTab(\'register\')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back</button>';
+  html += regStepperHtml(1);
+  html += '<div class="section-label">Step 1 — Select Order & Product</div>';
+  html += '<div class="form-section"><div class="form-card"><div class="form-group"><label>Select Order</label><select id="regOrder" onchange="onRegOrderSelect()">'+
+    '<option value="">— Select an order —</option>';
+  orders.forEach(function(o){ html += '<option value="'+o.orderId+'">'+o.orderId+' — '+fmtDate(o.date)+'</option>'; });
+  html += '</select></div></div></div><div id="regProductSection"></div><div id="regFormSection"></div>';
+  el.innerHTML = html; el.scrollTop = 0;
+}
+
+function onRegOrderSelect() {
+  var orderId = document.getElementById('regOrder').value;
+  selRegItem = null;
+  if (!orderId) { document.getElementById('regProductSection').innerHTML=''; document.getElementById('regFormSection').innerHTML=''; return; }
+  selRegOrder = getOrder(orderId);
+  if (!selRegOrder) return;
+  var html = '<div class="form-section"><div class="form-card"><div class="form-group"><label>Select Product / Line Item</label><select id="regProduct" onchange="onRegProductSelect()">'+
+    '<option value="">— Select a product —</option>';
+  selRegOrder.items.forEach(function(item, idx){
+    var prod = getProd(item.partNumber);
+    html += '<option value="'+idx+'">'+(prod?esc(prod.name):item.partNumber)+' — '+item.partNumber+' (Date code: '+item.lotNumber+')</option>';
+  });
+  html += '</select></div></div></div>';
+  html += '<div style="padding:8px 20px 0;font-size:11px;color:var(--on-surface-muted)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-1px"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg> In production, bulk registration via CSV/Excel import would be available here.</div>';
+  document.getElementById('regProductSection').innerHTML = html;
+  document.getElementById('regFormSection').innerHTML = '';
+}
+
+function onRegProductSelect() {
+  var idx = document.getElementById('regProduct').value;
+  if (idx === '') { document.getElementById('regFormSection').innerHTML=''; return; }
+  selRegItem = selRegOrder.items[parseInt(idx)];
+  var prod = getProd(selRegItem.partNumber);
+  if (!prod) return;
+
+  /* Check if already registered */
+  var existing = getAllRegistrations().find(function(r){ return r.lotNumber === selRegItem.lotNumber && r.distributorId === currentUser.distId && r.orderId === selRegOrder.orderId; });
+  if (existing) {
+    var ws = getWarrantyStatus(existing);
+    document.getElementById('regFormSection').innerHTML =
+      '<div style="padding:20px;text-align:center"><div class="warranty-card '+(ws.status==='active'||ws.status==='expiring_soon'?'active':'expired')+'">'+
+      '<div class="wc-status">ALREADY REGISTERED — '+ws.label+'</div>'+
+      '<div class="wc-detail">'+esc(existing.endCustomer)+' — Registered '+fmtDate(existing.registrationDate)+'</div></div>'+
+      '<button class="btn btn-primary" style="margin-top:8px" onclick="showRegDetail(\''+existing.registrationId+'\')">View Registration</button></div>';
+    return;
+  }
+
+  /* Show step 2 — site & installation details */
+  regStep = 2;
+  var el = document.getElementById('mainContent');
+  var html = '<button class="detail-back" onclick="showRegForm()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back to Step 1</button>';
+  html += regStepperHtml(2);
+
+  /* Product summary chip */
+  html += '<div style="padding:0 20px 8px"><div style="background:var(--primary-light);border-radius:var(--radius-sm);padding:10px 14px;display:flex;align-items:center;gap:10px">'+
+    '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>'+
+    '<div><div style="font-size:13px;font-weight:500;color:var(--primary)">'+esc(prod.name)+'</div>'+
+    '<div style="font-size:11px;color:var(--on-surface-variant)">'+prod.partNumber+' · Date code: '+selRegItem.lotNumber+' · '+prod.warrantyYears+'-year warranty</div></div></div></div>';
+
+  html += '<div class="section-label">Step 2 — Site & Installation Details</div>';
+
+  /* End customer & project */
+  html += '<div class="form-section"><div class="form-card">'+
+    '<div class="form-group"><label>End Customer / Company Name <span style="color:var(--error)">*</span></label><input type="text" id="regCustomer" placeholder="e.g. Memorial Regional Hospital"></div>'+
+    '<div class="form-group"><label>Project Name / Phase ID</label><input type="text" id="regProject" placeholder="e.g. Corliss Park DC — Phase 2"></div>'+
+    '<div class="form-group"><label>Site Address</label><input type="text" id="regSiteAddr" placeholder="e.g. 3501 Johnson St, Hollywood, FL 33021"></div>'+
+    '</div></div>';
+
+  /* Installation environment — lighting */
+  html += '<div class="form-section"><div class="form-card">'+
+    '<div class="form-group"><label>Installation Environment <span style="color:var(--error)">*</span></label><select id="regEnvironment">'+
+    '<option value="">Choose the environment</option>'+
+    '<option value="dry_indoor">Dry Location — Indoor (warehouse, office, school)</option>'+
+    '<option value="wet_underground">Wet Location — Outdoor pole / wall mount</option>'+
+    '<option value="hazardous_industrial">Harsh / Industrial — Cold storage, corrosive or high heat</option>'+
+    '</select></div>'+
+    '<div class="form-row">'+
+    '<div class="form-group"><label>Installation Date <span style="color:var(--error)">*</span></label><input type="date" id="regInstallDate" oninput="updateExpiryPreview()"></div>'+
+    '<div class="form-group"><label>Quantity Installed ('+prod.unitOfMeasure+') <span style="color:var(--error)">*</span></label><input type="number" id="regQty" placeholder="e.g. 40" min="1" max="'+selRegItem.quantity+'"></div></div>'+
+    '</div></div>';
+
+  /* Live expiry preview */
+  html += '<div class="expiry-preview pending" id="expiryPreview">'+
+    '<div class="ep-label">Warranty Coverage</div>'+
+    '<div class="ep-dates">Enter installation date to see warranty period</div>'+
+    '<div class="ep-duration">'+prod.warrantyYears+'-year coverage from installation date</div></div>';
+
+  /* Document uploads (PoC placeholder) */
+  html += '<div class="section-label" style="padding-bottom:4px">Supporting Documents</div>';
+  html += '<div class="doc-upload-row">'+
+    '<div class="doc-upload-slot" onclick="showToast(\'Document upload simulated in PoC\')">'+
+    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><br>'+
+    '<span class="dus-label">Proof of Purchase</span>PDF invoice from authorized distributor</div>'+
+    '<div class="doc-upload-slot" onclick="showToast(\'Document upload simulated in PoC\')">'+
+    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><br>'+
+    '<span class="dus-label">Installation Photos</span>Fixture and nameplate photos (optional)</div>'+
+    '</div>';
+
+  /* Notes */
+  html += '<div class="form-section"><div class="form-card">'+
+    '<div class="form-group"><label>Installation Notes</label><textarea id="regNotes" placeholder="Contractor details, conduit type, pull distances, any relevant compliance notes..."></textarea></div>'+
+    '</div></div>';
+
+  /* NEC compliance affirmations */
+  html += '<div class="compliance-section"><div class="compliance-card">'+
+    '<div class="cc-title">Installation Compliance</div>'+
+    '<label class="compliance-check"><input type="checkbox" id="regNecCheck"><span class="cc-text">I certify that all fixtures were installed in compliance with the current <strong>National Electrical Code (NEC)</strong> and applicable local codes.</span></label>'+
+    '<label class="compliance-check"><input type="checkbox" id="regInstallCheck"><span class="cc-text">I affirm that the fixtures were installed per the manufacturer\'s <strong>installation instructions</strong> and <strong>rated ambient / hours limits</strong> guidelines.</span></label>'+
+    '</div></div>';
+
+  html += '<div style="padding:0 20px 28px"><button class="btn btn-primary" style="width:100%;padding:14px;font-size:15px;border-radius:var(--radius-sm)" onclick="submitRegistration()">'+
+    '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px;margin-right:6px"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>'+
+    'Register Warranty</button></div>';
+
+  el.innerHTML = html; el.scrollTop = 0;
+}
+
+function updateExpiryPreview() {
+  var dateInput = document.getElementById('regInstallDate');
+  var preview = document.getElementById('expiryPreview');
+  if (!dateInput || !preview || !selRegItem) return;
+  var installDate = dateInput.value;
+  if (!installDate) {
+    preview.className = 'expiry-preview pending';
+    preview.innerHTML = '<div class="ep-label">Warranty Coverage</div><div class="ep-dates">Enter installation date to see warranty period</div><div class="ep-duration">Expiry calculated from installation date</div>';
+    return;
+  }
+  var prod = getProd(selRegItem.partNumber);
+  var years = prod ? prod.warrantyYears : 10;
+  var start = new Date(installDate + 'T00:00:00');
+  var end = new Date(start);
+  end.setFullYear(end.getFullYear() + years);
+  preview.className = 'expiry-preview';
+  preview.innerHTML = '<div class="ep-label">Warranty Coverage</div>'+
+    '<div class="ep-dates">'+fmtDate(installDate)+' → '+fmtDate(end.toISOString().split('T')[0])+'</div>'+
+    '<div class="ep-duration">'+years+'-year warranty · Expires '+fmtDate(end.toISOString().split('T')[0])+'</div>';
+}
+
+function submitRegistration() {
+  var customer = (document.getElementById('regCustomer')||{}).value;
+  var project = (document.getElementById('regProject')||{}).value;
+  var siteAddr = (document.getElementById('regSiteAddr')||{}).value;
+  var installDate = (document.getElementById('regInstallDate')||{}).value;
+  var qty = parseInt((document.getElementById('regQty')||{}).value);
+  var notes = (document.getElementById('regNotes')||{}).value;
+  var environment = (document.getElementById('regEnvironment')||{}).value;
+  var necCheck = document.getElementById('regNecCheck');
+  var installCheck = document.getElementById('regInstallCheck');
+
+  if (!customer || !installDate || !qty || !environment) { showToast('Please fill in all required fields.'); return; }
+  if (!necCheck || !necCheck.checked || !installCheck || !installCheck.checked) {
+    showToast('Please confirm both installation compliance checkboxes.'); return;
+  }
+  if (!selRegOrder || !selRegItem) return;
+
+  var prod = getProd(selRegItem.partNumber);
+  var warrantyYears = prod ? prod.warrantyYears : 10;
+  var expDate = new Date(installDate+'T00:00:00');
+  expDate.setFullYear(expDate.getFullYear() + warrantyYears);
+  var expiryStr = expDate.toISOString().split('T')[0];
+  var today = new Date().toISOString().split('T')[0];
+  var regId = 'WR-2026-' + String(100 + newRegistrations.length).padStart(4,'0');
+
+  var envLabels = { dry_indoor:'Dry Location (Indoor)', wet_underground:'Wet Location (Outdoor)', hazardous_industrial:'Hazardous / Industrial' };
+  var fullNotes = (envLabels[environment]||environment) + ' installation.';
+  if (notes) fullNotes += ' ' + notes;
+  fullNotes += ' NEC and installation-instruction compliance certified by registrant.';
+
+  newRegistrations.push({
+    registrationId: regId,
+    distributorId: currentUser.distId,
+    orderId: selRegOrder.orderId,
+    partNumber: selRegItem.partNumber,
+    lotNumber: selRegItem.lotNumber,
+    quantityRegistered: qty,
+    endCustomer: customer,
+    projectName: project || null,
+    siteAddress: siteAddr || null,
+    installDate: installDate,
+    registrationDate: today,
+    warrantyExpiry: expiryStr,
+    status: 'active',
+    voidReason: null,
+    voidDate: null,
+    environment: environment,
+    necCompliance: true,
+    installCompliance: true,
+    notes: fullNotes
+  });
+
+  /* Step 3 — Confirmation */
+  regStep = 3;
+  var envChipCls = environment === 'dry_indoor' ? 'env-dry' : environment === 'wet_underground' ? 'env-wet' : 'env-hazardous';
+  var envChipLabel = environment === 'dry_indoor' ? 'DRY / INDOOR' : environment === 'wet_underground' ? 'WET / OUTDOOR' : 'HAZARDOUS';
+
+  var mc = document.getElementById('mainContent');
+  mc.innerHTML = regStepperHtml(3) +
+    '<div class="success-msg"><div class="sm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>'+
+    '<h2>Warranty Registered</h2><div class="sm-id">'+regId+'</div>'+
+    '<p>'+(prod?esc(prod.name):selRegItem.partNumber)+'<br>'+
+    esc(customer)+'<br>'+qty.toLocaleString()+' '+(prod?prod.unitOfMeasure:'units')+'</p>'+
+    '<div style="margin-top:8px"><span class="env-chip '+envChipCls+'">'+envChipLabel+'</span></div>'+
+    '<p style="margin-top:10px;font-weight:500;color:var(--success)">Warranty active until '+fmtDate(expiryStr)+'</p>'+
+    '<p style="margin-top:6px;font-size:12px;color:var(--on-surface-muted)">NEC + installation-instruction compliance certified ✓</p>'+
+    '<div style="margin-top:24px"><button class="btn btn-primary" style="padding:12px 32px" onclick="switchDistTab(\'register\')">View Registrations</button></div></div>';
+  mc.scrollTop = 0;
+}
+
+/* ===== VOID WARRANTY MODAL (MANUFACTURER) ===== */
+var selectedVoidReason = null;
+
+function showVoidModal(regId, claimId) {
+  selectedVoidReason = null;
+  var reasons = DATA.voidReasons || [];
+  var html = '<div class="modal-overlay" id="voidModal" onclick="if(event.target===this)closeVoidModal()">'+
+    '<div class="modal-sheet"><h3>Void Warranty</h3>'+
+    '<div class="modal-sub">Registration '+regId+' — Select a reason for voiding this warranty. This action cannot be undone.</div>';
+  reasons.forEach(function(r){
+    html += '<button class="void-reason-option" onclick="selectVoidReason(this,\''+r.code+'\')" data-code="'+r.code+'">'+
+      '<div class="vro-label">'+esc(r.label)+'</div><div class="vro-desc">'+esc(r.description)+'</div></button>';
+  });
+  html += '<div class="form-group" style="margin-top:12px"><label>Additional Notes (optional)</label><textarea id="voidNotes" placeholder="Describe findings from the site audit or inspection..." style="width:100%;padding:12px 14px;font-size:14px;border:1px solid var(--outline);border-radius:var(--radius-sm);background:var(--surface);color:var(--on-surface);font-family:var(--font);min-height:70px;resize:vertical"></textarea></div>';
+  html += '<div style="display:flex;gap:8px;margin-top:16px">'+
+    '<button class="btn" style="flex:1" onclick="closeVoidModal()">Cancel</button>'+
+    '<button class="btn btn-danger" style="flex:1;background:var(--error);color:white" id="voidConfirmBtn" onclick="confirmVoid(\''+regId+'\',\''+claimId+'\')" disabled>Confirm Void</button></div>'+
+    '</div></div>';
+  document.body.insertAdjacentHTML('beforeend', html);
+}
+
+function selectVoidReason(el, code) {
+  selectedVoidReason = code;
+  var btns = document.querySelectorAll('.void-reason-option');
+  for(var i=0;i<btns.length;i++) btns[i].classList.toggle('selected', btns[i].getAttribute('data-code')===code);
+  document.getElementById('voidConfirmBtn').disabled = false;
+}
+
+function closeVoidModal() {
+  var m = document.getElementById('voidModal');
+  if(m) m.remove();
+  selectedVoidReason = null;
+}
+
+function confirmVoid(regId, claimId) {
+  if (!selectedVoidReason) return;
+  var reg = getAllRegistrations().find(function(r){ return r.registrationId === regId; });
+  if (!reg) { closeVoidModal(); return; }
+
+  var reason = (DATA.voidReasons||[]).find(function(r){ return r.code === selectedVoidReason; });
+  var notes = (document.getElementById('voidNotes')||{}).value || '';
+  var reasonText = (reason ? reason.label + ': ' + reason.description : selectedVoidReason) + (notes ? ' — ' + notes : '');
+
+  reg.status = 'voided';
+  reg.voidReason = reasonText;
+  reg.voidDate = new Date().toISOString().split('T')[0];
+  reg.voidedBy = 'Warranty Team';
+
+  closeVoidModal();
+  showToast('Warranty '+regId+' has been voided.');
+  if (claimId) showMfgDetail(claimId);
+}
+
+document.addEventListener('DOMContentLoaded', init);
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function(){});
+</script>
+<!-- ROLE TOGGLE (injected by pack_to_poc.py when ui.role_toggle is true) -->
+<style>
+.role-switch{display:none;align-items:center;gap:10px;padding:6px 16px;background:#eef2f7;border-bottom:1px solid rgba(0,0,0,.08);font-size:12px}
+.role-switch .rs-label{color:#4a5568;font-weight:600;white-space:nowrap}
+.role-switch .rs-pill{display:inline-flex;background:#fff;border:1px solid #c9d3e0;border-radius:999px;padding:2px;flex-shrink:0}
+.role-switch button{border:0;background:transparent;padding:6px 12px;border-radius:999px;font:inherit;font-weight:600;color:#3d4a5c;cursor:pointer;min-height:30px}
+.role-switch button.active{background:#1f3b63;color:#fff;cursor:default}
+.role-switch .rs-hint{margin-left:auto;color:#667085;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;background:none;border:0;font-family:inherit;padding:6px 4px;min-height:30px}
+.role-switch .rs-hint:not(:disabled){cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.role-switch .rs-hint:disabled{cursor:default}
+body.theme-classic .role-switch{background:#e9e9e9;border-radius:0}
+body.theme-classic .role-switch .rs-pill,body.theme-classic .role-switch button{border-radius:0}
+</style>
+<script>
+/* Quick role switch: keeps the user on the matching screen of the other role.
+   Contractor -> Manufacturer: claim detail -> same claim; just-submitted claim -> that claim;
+   registration -> its linked claim (else dashboard); History / New Claim -> Claims Queue; else Dashboard.
+   Manufacturer -> Contractor: claim detail -> same claim as the contractor who filed it;
+   Claims Queue -> My Claims (History); else Home (last contractor used, else the first). */
+(function () {
+  var view = { role: null, type: 'tab', tab: null, id: null };
+  var lastDistId = null, strip = null;
+
+  function wrap(name, after) {
+    var orig = window[name];
+    if (typeof orig !== 'function') return;
+    window[name] = function () {
+      var r = orig.apply(this, arguments);
+      try { after.apply(this, arguments); } catch (e) { /* never break the demo */ }
+      return r;
+    };
+  }
+  function findClaim(id) { return getAllClaims().find(function (c) { return c.claimId === id; }); }
+  function claimForReg(regId) {
+    var r = getAllRegistrations().find(function (x) { return x.registrationId === regId; });
+    if (!r) return null;
+    return getAllClaims().find(function (c) { return c.orderId === r.orderId && c.partNumber === r.partNumber; }) || null;
+  }
+  function ensureStrip() {
+    if (strip) { strip.style.display = 'flex'; return; }
+    var header = document.querySelector('#appShell .app-header');
+    if (!header) return;
+    strip = document.createElement('div');
+    strip.className = 'role-switch';
+    strip.innerHTML = '<span class="rs-label">View as</span><span class="rs-pill">' +
+      '<button type="button" data-r="distributor">Contractor</button>' +
+      '<button type="button" data-r="manufacturer">Manufacturer</button></span><button type="button" class="rs-hint"></button>';
+    strip.addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-r]');
+      if (b) { window.switchRole(b.getAttribute('data-r')); return; }
+      var hb = e.target.closest('.rs-hint');
+      /* optional hook: a layout module (modern.js) can open a contractor directory / account picker */
+      if (hb && !hb.disabled && typeof window.__cdHintAction === 'function') window.__cdHintAction(currentUser.role, hb);
+    });
+    header.insertAdjacentElement('afterend', strip);
+    strip.style.display = 'flex';
+  }
+  function paint() {
+    if (!strip || !currentUser) return;
+    var btns = strip.querySelectorAll('button[data-r]');
+    for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('active', btns[i].getAttribute('data-r') === currentUser.role);
+    var hook = typeof window.__cdHintAction === 'function', isClaim = view.type === 'claim';
+    var hint = isClaim ? 'Claim ' + view.id : (currentUser.role === 'distributor' ? currentUser.name : 'All contractors');
+    var hb = strip.querySelector('.rs-hint');
+    hb.textContent = hint + (hook && !isClaim ? (currentUser.role === 'distributor' ? ' \u25BE' : ' \u203A') : '');
+    hb.disabled = !hook || isClaim;
+    hb.title = hb.disabled ? '' : (currentUser.role === 'distributor' ? 'Switch contractor account' : 'Open contractor accounts');
+  }
+
+  wrap('switchMfgTab', function (tab) { view = { role: 'manufacturer', type: 'tab', tab: tab }; paint(); });
+  wrap('switchDistTab', function (tab) { view = { role: 'distributor', type: 'tab', tab: tab }; paint(); });
+  wrap('showMfgDetail', function (id) { view = { role: 'manufacturer', type: 'claim', id: id }; paint(); });
+  wrap('showDistDetail', function (id) { view = { role: 'distributor', type: 'claim', id: id }; paint(); });
+  wrap('showRegDetail', function (id) { view = { role: 'distributor', type: 'reg', id: id }; paint(); });
+  wrap('handleLogin', function (role, distId) { if (role === 'distributor' && distId) lastDistId = distId; ensureStrip(); paint(); });
+  wrap('signOut', function () { if (strip) strip.style.display = 'none'; });
+
+  var origSubmit = window.submitClaim;
+  if (typeof origSubmit === 'function') {
+    window.submitClaim = function () {
+      var n = newClaims.length;
+      var r = origSubmit.apply(this, arguments);
+      if (newClaims.length > n) { view = { role: 'distributor', type: 'claim', id: newClaims[newClaims.length - 1].claimId }; paint(); }
+      return r;
+    };
+  }
+
+  window.switchRole = function (target) {
+    if (!currentUser || currentUser.role === target) return;
+    var v = view, where;
+    if (target === 'manufacturer') {
+      if (currentUser.distId) lastDistId = currentUser.distId;
+      var c = v.type === 'claim' ? findClaim(v.id) : (v.type === 'reg' ? claimForReg(v.id) : null);
+      handleLogin('manufacturer');
+      if (c) { switchMfgTab('queue'); showMfgDetail(c.claimId); where = 'claim ' + c.claimId; }
+      else if (v.type === 'tab' && (v.tab === 'history' || v.tab === 'newclaim')) { switchMfgTab('queue'); where = 'Claims Queue'; }
+      else { where = 'Dashboard'; }
+    } else {
+      var cl = v.type === 'claim' ? findClaim(v.id) : null;
+      var distId = (cl && cl.distributorId) || lastDistId || DATA.distributors[0].id;
+      handleLogin('distributor', distId);
+      if (cl) { switchDistTab('history'); showDistDetail(cl.claimId); where = 'claim ' + cl.claimId; }
+      else if (v.type === 'tab' && v.tab === 'queue') { switchDistTab('history'); where = 'My Claims'; }
+      else { where = 'Home'; }
+    }
+    showToast((target === 'manufacturer' ? 'Manufacturer' : 'Contractor') + ' view: ' + where);
+  };
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+{
+  "name": "Halvern Tool & Fastener Co.",
+  "status": "DRAFT v0.1 for approval (5 Nov 2026)",
+  "shortName": "Halvern",
+  "title": "Halvern Warranty Desk",
+  "company": "Halvern Tool & Fastener Co.",
+  "lockupName": "HALVERN",
+  "lockupSub": "TOOL &amp; FASTENER CO.",
+  "headline": "Claimed at<br>the counter.",
+  "tagline": "<b>Halvern Warranty Desk.</b> Read us the date code. We’ll give you a decision, and the reason.",
+  "legend": "Halvern Tool &amp; Fastener Co. · Rockford IL · Cat HV-HD20-K2 · DC 2629A · UL",
+  "signoff": "Built in Rockford, Illinois, since 1958.",
+  "markOnDark": "#E8596A",
+  "mark": "<path fill-rule=\"evenodd\" d=\"M24 2.5L42.6 13.25V34.75L24 45.5L5.4 34.75V13.25Z M14.5 13.5V34.5H20V26.6H28V34.5H33.5V13.5H28V21.4H20V13.5Z\"/>",
+  "fonts": [
+    [
+      "HvHead",
+      "barlow-condensed-latin-700-normal.woff2",
+      "font-weight:700;"
+    ],
+    [
+      "HvHead",
+      "barlow-condensed-latin-800-normal.woff2",
+      "font-weight:800 900;"
+    ],
+    [
+      "HvText",
+      "barlow-latin-400-normal.woff2",
+      "font-weight:400;"
+    ],
+    [
+      "HvText",
+      "barlow-latin-500-normal.woff2",
+      "font-weight:500;"
+    ],
+    [
+      "HvText",
+      "barlow-latin-600-normal.woff2",
+      "font-weight:600;"
+    ],
+    [
+      "HvText",
+      "barlow-latin-700-normal.woff2",
+      "font-weight:700 800;"
+    ],
+    [
+      "HvMono",
+      "ibm-plex-mono-latin-500-normal.woff2",
+      "font-weight:100 900;"
+    ]
+  ],
+  "fontVars": {
+    "--tf-font": "'HvText',\"Barlow\",system-ui,-apple-system,\"Segoe UI\",Roboto,sans-serif",
+    "--tf-head": "'HvHead',\"Barlow Condensed\",\"Arial Narrow\",system-ui,sans-serif",
+    "--tf-mono": "'HvMono',\"IBM Plex Mono\",ui-monospace,Consolas,monospace"
+  },
+  "colors": {
+    "#2B221C": "#1E2328",
+    "#45372C": "#343B43",
+    "#3A2E25": "#2A3037",
+    "#241C17": "#161A1E",
+    "#1D1713": "#121518",
+    "#35291F": "#262C32",
+    "#4A3C31": "#3C444C",
+    "#A34E19": "#A3253A",
+    "#7C3A12": "#7C1A2B",
+    "#F6E8DD": "#F8E4E7",
+    "#E48A4E": "#E8596A",
+    "#B9A898": "#A7B0B9",
+    "#D7C9BC": "#C9D0D6",
+    "#CBBCAF": "#BCC4CB",
+    "#EDE3DA": "#E4E8EB",
+    "#F4F1EE": "#F2F4F5",
+    "#6B5848": "#56606A",
+    "#9C8B7D": "#8D97A0",
+    "rgba(43,34,28,": "rgba(30,35,40,",
+    "rgba(29,23,19,": "rgba(18,21,24,",
+    "rgba(228,138,78,": "rgba(232,89,106,",
+    "rgba(163,78,25,": "rgba(163,37,58,"
+  },
+  "hero": "halvern-signin.jpg",
+  "themeColor": "#1E2328"
+}

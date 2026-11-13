@@ -1,0 +1,1343 @@
+{
+  "manufacturer": {
+    "name": "Halvern Tool & Fastener Co.",
+    "tagline": "Warranty Desk",
+    "location": "Rockford, IL",
+    "phone": "(555) 555-0163",
+    "certifications": [
+      "UL Listed tools",
+      "ICC-ES anchors (illustrative)",
+      "Service centers: Rockford IL, Ontario CA"
+    ]
+  },
+  "products": [
+    {
+      "partNumber": "HV-HD20-K2",
+      "name": "20V Brushless Hammer Drill",
+      "category": "Cordless tools",
+      "description": "Halvern 20V Brushless Hammer Drill — 1/2 in chuck",
+      "awg": "1/2 in chuck",
+      "tempRating": "20V, kit with 2 × 5.0 Ah",
+      "voltageRating": "1,200 in-lb",
+      "certifications": [
+        "UL Listed",
+        "Brushless"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 5,
+      "warrantyTerms": "3-yr (HV-3R), 5 years if registered. Covers a defect in materials or workmanship. Remedy: repair or replace at Halvern's option, return freight paid. Excludes: normal wear (brushes, chucks, bits), drop or abuse damage, non-Halvern batteries or chargers, unauthorized repair.",
+      "applications": [
+        "Concrete",
+        "Masonry",
+        "Steel"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 299
+    },
+    {
+      "partNumber": "HV-HD20-B",
+      "name": "20V Brushless Hammer Drill",
+      "category": "Cordless tools",
+      "description": "Halvern 20V Brushless Hammer Drill — 1/2 in chuck",
+      "awg": "1/2 in chuck",
+      "tempRating": "20V, tool only",
+      "voltageRating": "1,200 in-lb",
+      "certifications": [
+        "UL Listed",
+        "Brushless"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 5,
+      "warrantyTerms": "3-yr (HV-3R), 5 years if registered. Covers a defect in materials or workmanship. Remedy: repair or replace at Halvern's option, return freight paid. Excludes: normal wear (brushes, chucks, bits), drop or abuse damage, non-Halvern batteries or chargers, unauthorized repair.",
+      "applications": [
+        "Concrete",
+        "Masonry",
+        "Steel"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 179
+    },
+    {
+      "partNumber": "HV-ID20-B",
+      "name": "20V Brushless Impact Driver",
+      "category": "Cordless tools",
+      "description": "Halvern 20V Brushless Impact Driver — 1/4 in hex",
+      "awg": "1/4 in hex",
+      "tempRating": "20V, tool only",
+      "voltageRating": "1,825 in-lb",
+      "certifications": [
+        "UL Listed",
+        "Brushless"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 5,
+      "warrantyTerms": "3-yr (HV-3R), 5 years if registered. Covers a defect in materials or workmanship. Remedy: repair or replace at Halvern's option, return freight paid. Excludes: normal wear (brushes, chucks, bits), drop or abuse damage, non-Halvern batteries or chargers, unauthorized repair.",
+      "applications": [
+        "Framing",
+        "Steel",
+        "MEP"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 159
+    },
+    {
+      "partNumber": "HV-GR20-B",
+      "name": "20V Angle Grinder",
+      "category": "Cordless tools",
+      "description": "Halvern 20V Angle Grinder — 4-1/2 in",
+      "awg": "4-1/2 in",
+      "tempRating": "20V, tool only",
+      "voltageRating": "9,000 rpm",
+      "certifications": [
+        "UL Listed",
+        "Brushless"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 5,
+      "warrantyTerms": "3-yr (HV-3R), 5 years if registered. Covers a defect in materials or workmanship. Remedy: repair or replace at Halvern's option, return freight paid. Excludes: normal wear (brushes, chucks, bits), drop or abuse damage, non-Halvern batteries or chargers, unauthorized repair.",
+      "applications": [
+        "Steel",
+        "Concrete"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 169
+    },
+    {
+      "partNumber": "HV-BS20-B",
+      "name": "20V Deep-Cut Band Saw",
+      "category": "Cordless tools",
+      "description": "Halvern 20V Deep-Cut Band Saw — 5 in deep cut",
+      "awg": "5 in deep cut",
+      "tempRating": "20V, tool only",
+      "voltageRating": "Variable speed",
+      "certifications": [
+        "UL Listed"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 5,
+      "warrantyTerms": "3-yr (HV-3R), 5 years if registered. Covers a defect in materials or workmanship. Remedy: repair or replace at Halvern's option, return freight paid. Excludes: normal wear (brushes, chucks, bits), drop or abuse damage, non-Halvern batteries or chargers, unauthorized repair.",
+      "applications": [
+        "Strut",
+        "Conduit",
+        "Threaded rod"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 329
+    },
+    {
+      "partNumber": "HV-BP20-50",
+      "name": "20V Battery Pack",
+      "category": "Cordless tools",
+      "description": "Halvern 20V Battery Pack — 5.0 Ah",
+      "awg": "5.0 Ah",
+      "tempRating": "20V lithium-ion",
+      "voltageRating": "Fuel gauge",
+      "certifications": [
+        "UL Listed"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 3,
+      "warrantyTerms": "3-yr (HV-BATT). Covers a defect, or the pack holds under 80% of rated capacity. Remedy: replacement pack. Excludes: physical or water damage, non-Halvern chargers.",
+      "applications": [
+        "All 20V tools"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 149
+    },
+    {
+      "partNumber": "HV-BP20-80",
+      "name": "20V Battery Pack",
+      "category": "Cordless tools",
+      "description": "Halvern 20V Battery Pack — 8.0 Ah",
+      "awg": "8.0 Ah",
+      "tempRating": "20V lithium-ion",
+      "voltageRating": "Fuel gauge",
+      "certifications": [
+        "UL Listed"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 3,
+      "warrantyTerms": "3-yr (HV-BATT). Covers a defect, or the pack holds under 80% of rated capacity. Remedy: replacement pack. Excludes: physical or water damage, non-Halvern chargers.",
+      "applications": [
+        "All 20V tools"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 219
+    },
+    {
+      "partNumber": "HV-RH26-SDSP",
+      "name": "SDS-Plus Rotary Hammer",
+      "category": "Rotary hammers",
+      "description": "Halvern SDS-Plus Rotary Hammer — 1 in SDS-Plus",
+      "awg": "1 in SDS-Plus",
+      "tempRating": "120V corded, 8 A",
+      "voltageRating": "2.6 J impact",
+      "certifications": [
+        "UL Listed",
+        "Anti-vibration"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 5,
+      "warrantyTerms": "3-yr (HV-3R), 5 years if registered. Covers a defect in materials or workmanship. Remedy: repair or replace at Halvern's option, return freight paid. Excludes: normal wear (brushes, chucks, bits), drop or abuse damage, non-Halvern batteries or chargers, unauthorized repair.",
+      "applications": [
+        "Concrete",
+        "Anchoring"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 289
+    },
+    {
+      "partNumber": "HV-RH45-SDSM",
+      "name": "SDS-Max Rotary Hammer",
+      "category": "Rotary hammers",
+      "description": "Halvern SDS-Max Rotary Hammer — 1-3/4 in SDS-Max",
+      "awg": "1-3/4 in SDS-Max",
+      "tempRating": "120V corded, 13.5 A",
+      "voltageRating": "8.5 J impact",
+      "certifications": [
+        "UL Listed",
+        "Anti-vibration"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 5,
+      "warrantyTerms": "3-yr (HV-3R), 5 years if registered. Covers a defect in materials or workmanship. Remedy: repair or replace at Halvern's option, return freight paid. Excludes: normal wear (brushes, chucks, bits), drop or abuse damage, non-Halvern batteries or chargers, unauthorized repair.",
+      "applications": [
+        "Concrete",
+        "Coring",
+        "Demolition"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 749
+    },
+    {
+      "partNumber": "HV-DB14-SEG",
+      "name": "Segmented Diamond Blade",
+      "category": "Diamond",
+      "description": "Halvern Segmented Diamond Blade — 14 in",
+      "awg": "14 in",
+      "tempRating": "Gas saw, 5,500 rpm max",
+      "voltageRating": "Cured concrete",
+      "certifications": [
+        "ANSI B7.1 (illustrative)"
+      ],
+      "warrantyYears": 1,
+      "registeredYears": 1,
+      "warrantyTerms": "1-yr (HV-DIA). Covers a defect in the segment bond or core before the segments are worn. Remedy: replacement blade or bit. Excludes: normal segment wear, wrong material for the spec, over-speed, dry use of a wet-only bit.",
+      "applications": [
+        "Concrete",
+        "Block",
+        "Pavers"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 189
+    },
+    {
+      "partNumber": "HV-DB12-SEG",
+      "name": "Segmented Diamond Blade",
+      "category": "Diamond",
+      "description": "Halvern Segmented Diamond Blade — 12 in",
+      "awg": "12 in",
+      "tempRating": "Gas saw, 6,300 rpm max",
+      "voltageRating": "Cured concrete",
+      "certifications": [
+        "ANSI B7.1 (illustrative)"
+      ],
+      "warrantyYears": 1,
+      "registeredYears": 1,
+      "warrantyTerms": "1-yr (HV-DIA). Covers a defect in the segment bond or core before the segments are worn. Remedy: replacement blade or bit. Excludes: normal segment wear, wrong material for the spec, over-speed, dry use of a wet-only bit.",
+      "applications": [
+        "Concrete",
+        "Block",
+        "Pavers"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 139
+    },
+    {
+      "partNumber": "HV-CB4-WET",
+      "name": "Diamond Core Bit",
+      "category": "Diamond",
+      "description": "Halvern Diamond Core Bit — 4 in",
+      "awg": "4 in",
+      "tempRating": "Wet core rig",
+      "voltageRating": "Reinforced concrete",
+      "certifications": [
+        "Laser-welded segments"
+      ],
+      "warrantyYears": 1,
+      "registeredYears": 1,
+      "warrantyTerms": "1-yr (HV-DIA). Covers a defect in the segment bond or core before the segments are worn. Remedy: replacement blade or bit. Excludes: normal segment wear, wrong material for the spec, over-speed, dry use of a wet-only bit.",
+      "applications": [
+        "Coring",
+        "Concrete"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 259
+    },
+    {
+      "partNumber": "HV-CB2-DRY",
+      "name": "Diamond Core Bit",
+      "category": "Diamond",
+      "description": "Halvern Diamond Core Bit — 2 in",
+      "awg": "2 in",
+      "tempRating": "Dry, rotary hammer",
+      "voltageRating": "Block, brick",
+      "certifications": [
+        "Laser-welded segments"
+      ],
+      "warrantyYears": 1,
+      "registeredYears": 1,
+      "warrantyTerms": "1-yr (HV-DIA). Covers a defect in the segment bond or core before the segments are worn. Remedy: replacement blade or bit. Excludes: normal segment wear, wrong material for the spec, over-speed, dry use of a wet-only bit.",
+      "applications": [
+        "Coring",
+        "Concrete"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 129
+    },
+    {
+      "partNumber": "HV-WA12-414",
+      "name": "Wedge Anchor",
+      "category": "Anchoring",
+      "description": "Halvern Wedge Anchor — 1/2 × 4-1/4 in",
+      "awg": "1/2 × 4-1/4 in",
+      "tempRating": "Box of 25",
+      "voltageRating": "Cracked concrete",
+      "certifications": [
+        "ICC-ES report (illustrative)",
+        "Zinc plated"
+      ],
+      "warrantyYears": 2,
+      "registeredYears": 2,
+      "warrantyTerms": "2-yr (HV-ANC). Covers a manufacturing defect before the printed shelf-life date. Remedy: replacement product. Excludes: past the shelf-life date, hole not cleaned or set per instructions.",
+      "applications": [
+        "Concrete",
+        "Anchoring"
+      ],
+      "unitOfMeasure": "box",
+      "listPricePer1000ft": 64
+    },
+    {
+      "partNumber": "HV-WA38-334",
+      "name": "Wedge Anchor",
+      "category": "Anchoring",
+      "description": "Halvern Wedge Anchor — 3/8 × 3-3/4 in",
+      "awg": "3/8 × 3-3/4 in",
+      "tempRating": "Box of 50",
+      "voltageRating": "Cracked concrete",
+      "certifications": [
+        "ICC-ES report (illustrative)",
+        "Zinc plated"
+      ],
+      "warrantyYears": 2,
+      "registeredYears": 2,
+      "warrantyTerms": "2-yr (HV-ANC). Covers a manufacturing defect before the printed shelf-life date. Remedy: replacement product. Excludes: past the shelf-life date, hole not cleaned or set per instructions.",
+      "applications": [
+        "Concrete",
+        "Anchoring"
+      ],
+      "unitOfMeasure": "box",
+      "listPricePer1000ft": 48
+    },
+    {
+      "partNumber": "HV-EA10-C12",
+      "name": "Epoxy Adhesive Anchor",
+      "category": "Anchoring",
+      "description": "Halvern Epoxy Adhesive Anchor — 10 oz cartridge",
+      "awg": "10 oz cartridge",
+      "tempRating": "Case of 12",
+      "voltageRating": "24-month shelf life",
+      "certifications": [
+        "ICC-ES report (illustrative)"
+      ],
+      "warrantyYears": 2,
+      "registeredYears": 2,
+      "warrantyTerms": "2-yr (HV-ANC). Covers a manufacturing defect before the printed shelf-life date. Remedy: replacement product. Excludes: past the shelf-life date, hole not cleaned or set per instructions.",
+      "applications": [
+        "Rebar dowels",
+        "Threaded rod",
+        "Anchoring"
+      ],
+      "unitOfMeasure": "case",
+      "listPricePer1000ft": 276
+    },
+    {
+      "partNumber": "HV-PAT27-SA",
+      "name": ".27 Cal Powder-Actuated Tool",
+      "category": "Powder-actuated & lasers",
+      "description": "Halvern .27 Cal Powder-Actuated Tool — .27 cal strip",
+      "awg": ".27 cal strip",
+      "tempRating": "Semi-automatic",
+      "voltageRating": "Up to 3 in pins",
+      "certifications": [
+        "Operator card required"
+      ],
+      "warrantyYears": 2,
+      "registeredYears": 3,
+      "warrantyTerms": "2-yr (HV-PAT), 3 years if registered. Covers a defect in materials or workmanship. Remedy: repair at a Halvern service center. Excludes: non-Halvern loads or pins, missed maintenance, operator not certified.",
+      "applications": [
+        "Steel",
+        "Concrete",
+        "Track"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 529
+    },
+    {
+      "partNumber": "HV-RL-SL300",
+      "name": "Self-Leveling Rotary Laser",
+      "category": "Powder-actuated & lasers",
+      "description": "Halvern Self-Leveling Rotary Laser — 1,000 ft range",
+      "awg": "1,000 ft range",
+      "tempRating": "Li-ion, 30 h",
+      "voltageRating": "±1/16 in at 100 ft",
+      "certifications": [
+        "Class 3R",
+        "IP66"
+      ],
+      "warrantyYears": 3,
+      "registeredYears": 3,
+      "warrantyTerms": "3-yr (HV-LSR). Covers a defect, or calibration out of spec without impact. Remedy: repair or recalibration at a Halvern service center. Excludes: drop or impact damage, water beyond the IP rating.",
+      "applications": [
+        "Layout",
+        "Grading",
+        "Ceilings"
+      ],
+      "unitOfMeasure": "ea",
+      "listPricePer1000ft": 1149
+    }
+  ],
+  "distributors": [
+    {
+      "id": "D-CCS",
+      "name": "Corridan Construction Supply",
+      "code": "CCS",
+      "tier": "Registered Partner",
+      "region": "Southern California",
+      "contactName": "Monica Reyes",
+      "contactEmail": "warranty@d-ccs.example",
+      "contactPhone": "(555) 555-0120",
+      "city": "Anaheim, CA",
+      "accountSince": "2018",
+      "annualVolume": "(illustrative)"
+    },
+    {
+      "id": "D-SFT",
+      "name": "Sandvale Fastener & Tool",
+      "code": "SFT",
+      "tier": "Registered Partner",
+      "region": "Arizona",
+      "contactName": "Grant Holloway",
+      "contactEmail": "warranty@d-sft.example",
+      "contactPhone": "(555) 555-0121",
+      "city": "Phoenix, AZ",
+      "accountSince": "2018",
+      "annualVolume": "(illustrative)"
+    },
+    {
+      "id": "D-TJS",
+      "name": "Tallis Jobsite Supply",
+      "code": "TJS",
+      "tier": "Standard",
+      "region": "Nevada",
+      "contactName": "Andre Whitfield",
+      "contactEmail": "warranty@d-tjs.example",
+      "contactPhone": "(555) 555-0122",
+      "city": "Las Vegas, NV",
+      "accountSince": "2018",
+      "annualVolume": "(illustrative)"
+    },
+    {
+      "id": "D-PSS",
+      "name": "Penhallow Specialty Supply",
+      "code": "PSS",
+      "tier": "Standard",
+      "region": "San Diego County",
+      "contactName": "Kira Lindqvist",
+      "contactEmail": "warranty@d-pss.example",
+      "contactPhone": "(555) 555-0123",
+      "city": "San Diego, CA",
+      "accountSince": "2018",
+      "annualVolume": "(illustrative)"
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "ORD-2026-1001",
+      "distributorId": "D-CCS",
+      "date": "2026-08-11",
+      "items": [
+        {
+          "partNumber": "HV-HD20-K2",
+          "quantity": 12,
+          "unitPrice": 299,
+          "lotNumber": "2629A"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-1002",
+      "distributorId": "D-SFT",
+      "date": "2026-05-19",
+      "items": [
+        {
+          "partNumber": "HV-BP20-80",
+          "quantity": 24,
+          "unitPrice": 219,
+          "lotNumber": "2618F"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-1003",
+      "distributorId": "D-TJS",
+      "date": "2026-08-26",
+      "items": [
+        {
+          "partNumber": "HV-DB14-SEG",
+          "quantity": 8,
+          "unitPrice": 189,
+          "lotNumber": "2624D"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-1004",
+      "distributorId": "D-PSS",
+      "date": "2026-04-07",
+      "items": [
+        {
+          "partNumber": "HV-DB12-SEG",
+          "quantity": 16,
+          "unitPrice": 139,
+          "lotNumber": "2611D"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-1005",
+      "distributorId": "D-CCS",
+      "date": "2026-04-13",
+      "items": [
+        {
+          "partNumber": "HV-PAT27-SA",
+          "quantity": 4,
+          "unitPrice": 529,
+          "lotNumber": "2612C"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-1006",
+      "distributorId": "D-SFT",
+      "date": "2026-02-02",
+      "items": [
+        {
+          "partNumber": "HV-RL-SL300",
+          "quantity": 4,
+          "unitPrice": 1149,
+          "lotNumber": "2603R"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2022-1007",
+      "distributorId": "D-TJS",
+      "date": "2022-06-28",
+      "items": [
+        {
+          "partNumber": "HV-RH45-SDSM",
+          "quantity": 8,
+          "unitPrice": 749,
+          "lotNumber": "2221B"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-1008",
+      "distributorId": "D-PSS",
+      "date": "2026-06-08",
+      "items": [
+        {
+          "partNumber": "HV-BP20-50",
+          "quantity": 16,
+          "unitPrice": 149,
+          "lotNumber": "2618F"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-3101",
+      "distributorId": "D-CCS",
+      "date": "2026-08-11",
+      "items": [
+        {
+          "partNumber": "HV-HD20-K2",
+          "quantity": 12,
+          "unitPrice": 299,
+          "lotNumber": "2629A"
+        },
+        {
+          "partNumber": "HV-RH26-SDSP",
+          "quantity": 6,
+          "unitPrice": 289,
+          "lotNumber": "2627B"
+        },
+        {
+          "partNumber": "HV-DB14-SEG",
+          "quantity": 20,
+          "unitPrice": 189,
+          "lotNumber": "2624D"
+        },
+        {
+          "partNumber": "HV-WA12-414",
+          "quantity": 40,
+          "unitPrice": 64,
+          "lotNumber": "2620E"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2022-3102",
+      "distributorId": "D-CCS",
+      "date": "2022-06-21",
+      "items": [
+        {
+          "partNumber": "HV-RH45-SDSM",
+          "quantity": 2,
+          "unitPrice": 749,
+          "lotNumber": "2221B"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2021-3103",
+      "distributorId": "D-CCS",
+      "date": "2021-03-09",
+      "items": [
+        {
+          "partNumber": "HV-HD20-B",
+          "quantity": 4,
+          "unitPrice": 179,
+          "lotNumber": "2109A"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-3201",
+      "distributorId": "D-SFT",
+      "date": "2026-05-19",
+      "items": [
+        {
+          "partNumber": "HV-BP20-80",
+          "quantity": 24,
+          "unitPrice": 219,
+          "lotNumber": "2618F"
+        },
+        {
+          "partNumber": "HV-ID20-B",
+          "quantity": 10,
+          "unitPrice": 159,
+          "lotNumber": "2617A"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-3301",
+      "distributorId": "D-TJS",
+      "date": "2026-04-07",
+      "items": [
+        {
+          "partNumber": "HV-PAT27-SA",
+          "quantity": 3,
+          "unitPrice": 529,
+          "lotNumber": "2612C"
+        },
+        {
+          "partNumber": "HV-GR20-B",
+          "quantity": 6,
+          "unitPrice": 169,
+          "lotNumber": "2613A"
+        }
+      ]
+    },
+    {
+      "orderId": "ORD-2026-3401",
+      "distributorId": "D-PSS",
+      "date": "2026-07-14",
+      "items": [
+        {
+          "partNumber": "HV-CB4-WET",
+          "quantity": 6,
+          "unitPrice": 259,
+          "lotNumber": "2626D"
+        },
+        {
+          "partNumber": "HV-EA10-C12",
+          "quantity": 4,
+          "unitPrice": 276,
+          "lotNumber": "2622E"
+        },
+        {
+          "partNumber": "HV-BS20-B",
+          "quantity": 2,
+          "unitPrice": 329,
+          "lotNumber": "2625A"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claimId": "WC-2041",
+      "distributorId": "D-CCS",
+      "orderId": "ORD-2026-1001",
+      "partNumber": "HV-HD20-K2",
+      "lotNumber": "2629A",
+      "quantityAffected": 3,
+      "status": "approved",
+      "severity": "high",
+      "failureType": "Motor or switch failure",
+      "description": "3 × HV-HD20-K2 at Marquand Concrete Cutting: motor stops under load, then won't restart. Crew swapped batteries; same result.",
+      "environment": "Heavy duty — concrete drilling, high dust",
+      "installDate": "2026-08-18",
+      "claimDate": "2026-10-14",
+      "assignedTo": "Renee Whitcomb",
+      "resolution": "Credit memo CM-71304: parts $537.00 + freight credit $45.00",
+      "creditAmount": 582.0,
+      "sampleRequested": true,
+      "sampleReceived": false,
+      "sampleReceivedDate": null,
+      "resolvedDate": "2026-10-30",
+      "timeline": [
+        {
+          "date": "2026-10-14",
+          "event": "Claim submitted by Corridan Construction Supply",
+          "by": "Corridan Construction Supply"
+        },
+        {
+          "date": "2026-10-16",
+          "event": "RA issued — return the tool to a Halvern service center within 10 days",
+          "by": "Renee Whitcomb"
+        },
+        {
+          "date": "2026-10-28",
+          "event": "Approved — replacement authorized",
+          "by": "Renee Whitcomb"
+        },
+        {
+          "date": "2026-10-30",
+          "event": "Credit memo CM-71304 issued — $582.00",
+          "by": "Renee Whitcomb"
+        }
+      ],
+      "claimSource": "Counter"
+    },
+    {
+      "claimId": "WC-2042",
+      "distributorId": "D-SFT",
+      "orderId": "ORD-2026-1002",
+      "partNumber": "HV-BP20-80",
+      "lotNumber": "2618F",
+      "quantityAffected": 6,
+      "status": "sample_requested",
+      "severity": "high",
+      "failureType": "Battery won't charge or hold a charge",
+      "description": "6 × HV-BP20-80 at Ochoa & Pell Drywall: packs show full on the gauge, then die within 10 minutes. All from date code 2618F.",
+      "environment": "Interior — framing and drywall",
+      "installDate": "2026-05-26",
+      "claimDate": "2026-11-06",
+      "assignedTo": "Renee Whitcomb",
+      "resolution": null,
+      "creditAmount": null,
+      "sampleRequested": true,
+      "sampleReceived": false,
+      "sampleReceivedDate": null,
+      "resolvedDate": null,
+      "timeline": [
+        {
+          "date": "2026-11-06",
+          "event": "Claim submitted by Sandvale Fastener & Tool",
+          "by": "Sandvale Fastener & Tool"
+        },
+        {
+          "date": "2026-11-10",
+          "event": "RA issued RA-26-01152 — return the tool to a Halvern service center within 10 days",
+          "by": "Renee Whitcomb"
+        },
+        {
+          "date": "2026-11-10",
+          "event": "Advance replacement shipped — failed units due back Fri, Nov 20",
+          "by": "Renee Whitcomb"
+        }
+      ],
+      "claimSource": "Counter"
+    },
+    {
+      "claimId": "WC-2043",
+      "distributorId": "D-TJS",
+      "orderId": "ORD-2026-1003",
+      "partNumber": "HV-DB14-SEG",
+      "lotNumber": "2624D",
+      "quantityAffected": 2,
+      "status": "approved",
+      "severity": "critical",
+      "failureType": "Segment loss or cracked core",
+      "description": "2 × HV-DB14-SEG at Ironvale Steel Erectors: lost two segments each while cutting cured slab. Saw stopped, no injuries.",
+      "environment": "Exterior / wet — sitework, wet cutting",
+      "installDate": "2026-09-02",
+      "claimDate": "2026-09-29",
+      "assignedTo": "Renee Whitcomb",
+      "resolution": "Approved — parts $378.00. Approved as a defect: the photos show a segment bond failure, not wear",
+      "creditAmount": 378.0,
+      "sampleRequested": false,
+      "sampleReceived": false,
+      "sampleReceivedDate": null,
+      "resolvedDate": "2026-10-08",
+      "timeline": [
+        {
+          "date": "2026-09-29",
+          "event": "Claim submitted by Tallis Jobsite Supply",
+          "by": "Tallis Jobsite Supply"
+        },
+        {
+          "date": "2026-10-08",
+          "event": "Approved — Approved as a defect: the photos show a segment bond failure, not wear",
+          "by": "Renee Whitcomb"
+        }
+      ],
+      "claimSource": "Counter"
+    },
+    {
+      "claimId": "WC-2044",
+      "distributorId": "D-PSS",
+      "orderId": "ORD-2026-1004",
+      "partNumber": "HV-DB12-SEG",
+      "lotNumber": "2611D",
+      "quantityAffected": 4,
+      "status": "rejected",
+      "severity": "low",
+      "failureType": "Wore out early",
+      "description": "4 × HV-DB12-SEG at Quillon Mechanical: blades worn out after about 6 weeks of daily cutting.",
+      "environment": "Exterior / wet — sitework, wet cutting",
+      "installDate": "2026-04-14",
+      "claimDate": "2026-06-02",
+      "assignedTo": "Renee Whitcomb",
+      "resolution": "Denied — Not covered: the segments wore down evenly to the core, which is normal wear, not a defect",
+      "creditAmount": null,
+      "sampleRequested": false,
+      "sampleReceived": false,
+      "sampleReceivedDate": null,
+      "resolvedDate": null,
+      "timeline": [
+        {
+          "date": "2026-06-02",
+          "event": "Claim submitted by Penhallow Specialty Supply",
+          "by": "Penhallow Specialty Supply"
+        },
+        {
+          "date": "2026-06-05",
+          "event": "Denied — Not covered: the segments wore down evenly to the core, which is normal wear, not a defect",
+          "by": "Renee Whitcomb"
+        }
+      ],
+      "claimSource": "Counter"
+    },
+    {
+      "claimId": "WC-2045",
+      "distributorId": "D-CCS",
+      "orderId": "ORD-2026-1005",
+      "partNumber": "HV-PAT27-SA",
+      "lotNumber": "2612C",
+      "quantityAffected": 1,
+      "status": "sample_requested",
+      "severity": "critical",
+      "failureType": "Misfire or won't cycle",
+      "description": "1 × HV-PAT27-SA at Tarrow Builders: strip feeds but the tool won't fire on every third load. Halvern loads only; cleaned weekly.",
+      "environment": "Interior — track and deck fastening",
+      "installDate": "2026-04-20",
+      "claimDate": "2026-11-09",
+      "assignedTo": "Renee Whitcomb",
+      "resolution": null,
+      "creditAmount": null,
+      "sampleRequested": true,
+      "sampleReceived": false,
+      "sampleReceivedDate": null,
+      "resolvedDate": null,
+      "timeline": [
+        {
+          "date": "2026-11-09",
+          "event": "Claim submitted by Corridan Construction Supply",
+          "by": "Corridan Construction Supply"
+        },
+        {
+          "date": "2026-11-11",
+          "event": "RA issued RA-26-01187 — return the tool to a Halvern service center within 10 days",
+          "by": "Renee Whitcomb"
+        }
+      ],
+      "claimSource": "Counter"
+    },
+    {
+      "claimId": "WC-2046",
+      "distributorId": "D-SFT",
+      "orderId": "ORD-2026-1006",
+      "partNumber": "HV-RL-SL300",
+      "lotNumber": "2603R",
+      "quantityAffected": 1,
+      "status": "rejected",
+      "severity": "medium",
+      "failureType": "Out of calibration",
+      "description": "1 × HV-RL-SL300 at Ochoa & Pell Drywall: reads 3/8 in off at 100 ft. Tripod tipped over last month.",
+      "environment": "Interior — ceiling layout",
+      "installDate": "2026-02-09",
+      "claimDate": "2026-08-24",
+      "assignedTo": "Renee Whitcomb",
+      "resolution": "Denied — Not covered: the housing is cracked from a drop, and impact damage is excluded under HV-LSR. Recalibration quoted at $185",
+      "creditAmount": null,
+      "sampleRequested": false,
+      "sampleReceived": false,
+      "sampleReceivedDate": null,
+      "resolvedDate": null,
+      "timeline": [
+        {
+          "date": "2026-08-24",
+          "event": "Claim submitted by Sandvale Fastener & Tool",
+          "by": "Sandvale Fastener & Tool"
+        },
+        {
+          "date": "2026-08-27",
+          "event": "Denied — Not covered: the housing is cracked from a drop, and impact damage is excluded under HV-LSR. Recalibration quoted at $185",
+          "by": "Renee Whitcomb"
+        }
+      ],
+      "claimSource": "Counter"
+    },
+    {
+      "claimId": "WC-2047",
+      "distributorId": "D-TJS",
+      "orderId": "ORD-2022-1007",
+      "partNumber": "HV-RH45-SDSM",
+      "lotNumber": "2221B",
+      "quantityAffected": 2,
+      "status": "under_review",
+      "severity": "medium",
+      "failureType": "Gearbox or clutch failure",
+      "description": "2 × HV-RH45-SDSM at Ironvale Steel Erectors: grinding noise under load and the clutch slips when coring. Evidence: video of the noise and the service log.",
+      "environment": "Heavy duty — coring and demolition",
+      "installDate": "2022-07-05",
+      "claimDate": "2026-11-03",
+      "assignedTo": "Renee Whitcomb",
+      "resolution": null,
+      "creditAmount": null,
+      "sampleRequested": false,
+      "sampleReceived": false,
+      "sampleReceivedDate": null,
+      "resolvedDate": null,
+      "timeline": [
+        {
+          "date": "2026-11-03",
+          "event": "Claim submitted by Tallis Jobsite Supply",
+          "by": "Tallis Jobsite Supply"
+        }
+      ],
+      "claimSource": "Counter"
+    },
+    {
+      "claimId": "WC-2048",
+      "distributorId": "D-PSS",
+      "orderId": "ORD-2026-1008",
+      "partNumber": "HV-BP20-50",
+      "lotNumber": "2618F",
+      "quantityAffected": 4,
+      "status": "info_requested",
+      "severity": "high",
+      "failureType": "Battery won't charge or hold a charge",
+      "description": "4 × HV-BP20-50 at Quillon Mechanical: packs drop from full to empty in minutes. Same date code as the Sandvale claim.",
+      "environment": "Interior — MEP rough-in",
+      "installDate": "2026-06-15",
+      "claimDate": "2026-11-12",
+      "assignedTo": "Renee Whitcomb",
+      "resolution": null,
+      "creditAmount": null,
+      "sampleRequested": false,
+      "sampleReceived": false,
+      "sampleReceivedDate": null,
+      "resolvedDate": null,
+      "timeline": [
+        {
+          "date": "2026-11-12",
+          "event": "Claim submitted by Penhallow Specialty Supply",
+          "by": "Penhallow Specialty Supply"
+        },
+        {
+          "date": "2026-11-13",
+          "event": "Info requested: a receipt or invoice showing the purchase date",
+          "by": "Renee Whitcomb"
+        }
+      ],
+      "claimSource": "Counter"
+    }
+  ],
+  "qualityTeam": [
+    {
+      "name": "Renee Whitcomb",
+      "role": "Warranty Claims Manager",
+      "email": "rwhitcomb@halverntool.com"
+    },
+    {
+      "name": "Luis Ortega",
+      "role": "Service Center Lead, Ontario CA",
+      "email": "lortega@halverntool.com"
+    },
+    {
+      "name": "Mei Tanaka",
+      "role": "Warranty Analyst",
+      "email": "mtanaka@halverntool.com"
+    }
+  ],
+  "claimStatuses": {
+    "pending": {
+      "label": "Submitted",
+      "color": "#D97706",
+      "icon": "clock"
+    },
+    "under_review": {
+      "label": "Under Review",
+      "color": "#2563EB",
+      "icon": "search"
+    },
+    "sample_requested": {
+      "label": "RA issued – return the tool",
+      "color": "#7C3AED",
+      "icon": "package"
+    },
+    "info_requested": {
+      "label": "Needs receipt or label photo",
+      "color": "#EA580C",
+      "icon": "help-circle"
+    },
+    "approved": {
+      "label": "Approved – credit / replacement",
+      "color": "#16A34A",
+      "icon": "check-circle"
+    },
+    "rejected": {
+      "label": "Denied",
+      "color": "#DC2626",
+      "icon": "x-circle"
+    }
+  },
+  "failureTypes": [
+    "Motor or switch failure",
+    "Battery won't charge or hold a charge",
+    "Gearbox or clutch failure",
+    "Chuck or bit retention failure",
+    "Overheats or shuts down",
+    "Segment loss or cracked core",
+    "Wore out early",
+    "Misfire or won't cycle",
+    "Out of calibration",
+    "Anchor won't set or cartridge won't dispense",
+    "Dead on arrival"
+  ],
+  "severityLevels": [
+    {
+      "level": "critical",
+      "label": "Critical — Safety risk (segment loss, misfire)",
+      "color": "#DC2626",
+      "sla": "Same business day"
+    },
+    {
+      "level": "high",
+      "label": "High — Crew down, tool unusable",
+      "color": "#EA580C",
+      "sla": "1 business day"
+    },
+    {
+      "level": "medium",
+      "label": "Medium — Works, but degraded",
+      "color": "#D97706",
+      "sla": "3 business days"
+    },
+    {
+      "level": "low",
+      "label": "Low — Wear or cosmetic question",
+      "color": "#6B7280",
+      "sla": "5 business days"
+    }
+  ],
+  "warrantyRegistrations": [
+    {
+      "registrationId": "WR-2026-0001",
+      "distributorId": "D-CCS",
+      "orderId": "ORD-2026-1001",
+      "partNumber": "HV-HD20-K2",
+      "lotNumber": "2629A",
+      "quantityRegistered": 12,
+      "endCustomer": "Marquand Concrete Cutting",
+      "projectName": "Marquand Concrete Cutting",
+      "siteAddress": null,
+      "installDate": "2026-08-18",
+      "registrationDate": "2026-08-23",
+      "warrantyExpiry": "2031-08-18",
+      "status": "active",
+      "voidReason": null,
+      "voidDate": null,
+      "environment": "hazardous_industrial",
+      "necCompliance": true,
+      "installCompliance": true,
+      "notes": "Registered."
+    },
+    {
+      "registrationId": "WR-2026-0002",
+      "distributorId": "D-CCS",
+      "orderId": "ORD-2026-1005",
+      "partNumber": "HV-PAT27-SA",
+      "lotNumber": "2612C",
+      "quantityRegistered": 4,
+      "endCustomer": "Tarrow Builders",
+      "projectName": "Tarrow Builders",
+      "siteAddress": null,
+      "installDate": "2026-04-20",
+      "registrationDate": "2026-04-25",
+      "warrantyExpiry": "2029-04-20",
+      "status": "active",
+      "voidReason": null,
+      "voidDate": null,
+      "environment": "dry_indoor",
+      "necCompliance": true,
+      "installCompliance": true,
+      "notes": "Registered."
+    },
+    {
+      "registrationId": "WR-2022-0003",
+      "distributorId": "D-TJS",
+      "orderId": "ORD-2022-1007",
+      "partNumber": "HV-RH45-SDSM",
+      "lotNumber": "2221B",
+      "quantityRegistered": 8,
+      "endCustomer": "Ironvale Steel Erectors",
+      "projectName": "Ironvale Steel Erectors",
+      "siteAddress": null,
+      "installDate": "2022-07-05",
+      "registrationDate": "2022-07-10",
+      "warrantyExpiry": "2027-07-05",
+      "status": "active",
+      "voidReason": null,
+      "voidDate": null,
+      "environment": "hazardous_industrial",
+      "necCompliance": true,
+      "installCompliance": true,
+      "notes": "Registered."
+    },
+    {
+      "registrationId": "WR-2026-0004",
+      "distributorId": "D-CCS",
+      "orderId": "ORD-2026-3101",
+      "partNumber": "HV-HD20-K2",
+      "lotNumber": "2629A",
+      "quantityRegistered": 12,
+      "endCustomer": "Marquand Concrete Cutting",
+      "projectName": "Marquand — 2026 fleet refresh",
+      "siteAddress": null,
+      "installDate": "2026-08-18",
+      "registrationDate": "2026-08-24",
+      "warrantyExpiry": "2031-08-18",
+      "status": "active",
+      "voidReason": null,
+      "voidDate": null,
+      "environment": "hazardous_industrial",
+      "necCompliance": true,
+      "installCompliance": true,
+      "notes": "Registered."
+    },
+    {
+      "registrationId": "WR-2022-0005",
+      "distributorId": "D-CCS",
+      "orderId": "ORD-2022-3102",
+      "partNumber": "HV-RH45-SDSM",
+      "lotNumber": "2221B",
+      "quantityRegistered": 2,
+      "endCustomer": "Tarrow Builders",
+      "projectName": "Tarrow — coring rigs",
+      "siteAddress": null,
+      "installDate": "2022-07-05",
+      "registrationDate": "2022-07-11",
+      "warrantyExpiry": "2027-07-05",
+      "status": "active",
+      "voidReason": null,
+      "voidDate": null,
+      "environment": "hazardous_industrial",
+      "necCompliance": true,
+      "installCompliance": true,
+      "notes": "Registered. 5-year coverage ends Jul 2027."
+    },
+    {
+      "registrationId": "WR-2021-0006",
+      "distributorId": "D-CCS",
+      "orderId": "ORD-2021-3103",
+      "partNumber": "HV-HD20-B",
+      "lotNumber": "2109A",
+      "quantityRegistered": 4,
+      "endCustomer": "Tarrow Builders",
+      "projectName": "Tarrow — framing crew",
+      "siteAddress": null,
+      "installDate": "2021-03-22",
+      "registrationDate": "2021-03-28",
+      "warrantyExpiry": "2026-03-22",
+      "status": "active",
+      "voidReason": null,
+      "voidDate": null,
+      "environment": "dry_indoor",
+      "necCompliance": true,
+      "installCompliance": true,
+      "notes": "Registered."
+    },
+    {
+      "registrationId": "WR-2026-0007",
+      "distributorId": "D-SFT",
+      "orderId": "ORD-2026-3201",
+      "partNumber": "HV-ID20-B",
+      "lotNumber": "2617A",
+      "quantityRegistered": 10,
+      "endCustomer": "Ochoa & Pell Drywall",
+      "projectName": "Ochoa & Pell — battery swap-out",
+      "siteAddress": null,
+      "installDate": "2026-05-26",
+      "registrationDate": "2026-06-01",
+      "warrantyExpiry": "2031-05-26",
+      "status": "active",
+      "voidReason": null,
+      "voidDate": null,
+      "environment": "dry_indoor",
+      "necCompliance": true,
+      "installCompliance": true,
+      "notes": "Registered."
+    },
+    {
+      "registrationId": "WR-2026-0008",
+      "distributorId": "D-TJS",
+      "orderId": "ORD-2026-3301",
+      "partNumber": "HV-PAT27-SA",
+      "lotNumber": "2612C",
+      "quantityRegistered": 3,
+      "endCustomer": "Ironvale Steel Erectors",
+      "projectName": "Ironvale — deck crew",
+      "siteAddress": null,
+      "installDate": "2026-04-20",
+      "registrationDate": "2026-04-26",
+      "warrantyExpiry": "2029-04-20",
+      "status": "voided",
+      "voidReason": "non_oem_loads",
+      "voidDate": "2026-09-30",
+      "voidedBy": "Renee Whitcomb",
+      "environment": "dry_indoor",
+      "necCompliance": true,
+      "installCompliance": false,
+      "notes": "Voided: non-Halvern loads found in the tool."
+    },
+    {
+      "registrationId": "WR-2026-0009",
+      "distributorId": "D-PSS",
+      "orderId": "ORD-2026-3401",
+      "partNumber": "HV-EA10-C12",
+      "lotNumber": "2622E",
+      "quantityRegistered": 4,
+      "endCustomer": "Quillon Mechanical",
+      "projectName": "Quillon — riser coring",
+      "siteAddress": null,
+      "installDate": "2026-07-21",
+      "registrationDate": "2026-07-27",
+      "warrantyExpiry": "2028-07-21",
+      "status": "active",
+      "voidReason": null,
+      "voidDate": null,
+      "environment": "wet_underground",
+      "necCompliance": true,
+      "installCompliance": true,
+      "notes": "Registered."
+    }
+  ],
+  "voidReasons": [
+    {
+      "code": "physical_damage",
+      "label": "Drop or abuse",
+      "description": "Impact, crushing or misuse damage"
+    },
+    {
+      "code": "non_oem_loads",
+      "label": "Non-Halvern loads or parts",
+      "description": "Third-party loads, pins, batteries or chargers used"
+    },
+    {
+      "code": "unauthorized_repair",
+      "label": "Unauthorized repair",
+      "description": "Opened or repaired outside a Halvern service center"
+    },
+    {
+      "code": "missed_service",
+      "label": "Missed maintenance",
+      "description": "Required cleaning or service not done"
+    },
+    {
+      "code": "wrong_application",
+      "label": "Outside the operator's manual",
+      "description": "Used beyond rated speed, size or material"
+    },
+    {
+      "code": "water_damage",
+      "label": "Water damage",
+      "description": "Water exposure beyond the IP rating"
+    }
+  ],
+  "ui": {
+    "specLabels": [
+      "Size",
+      "Power",
+      "Rating"
+    ],
+    "lookupPresets": [
+      [
+        "By catalog number",
+        "mono",
+        [
+          "HV-HD20-K2",
+          "HV-BP20-80",
+          "HV-RH45-SDSM",
+          "HV-DB14-SEG",
+          "HV-WA12-414",
+          "HV-PAT27-SA"
+        ]
+      ],
+      [
+        "By description",
+        "",
+        [
+          "hammer drill",
+          "battery",
+          "diamond blade",
+          "core bit",
+          "wedge anchor",
+          "rotary laser"
+        ]
+      ],
+      [
+        "By product line",
+        "",
+        [
+          "Cordless tools",
+          "Rotary hammers",
+          "Diamond",
+          "Anchoring",
+          "Powder-actuated & lasers"
+        ]
+      ]
+    ],
+    "itemWord": "tool",
+    "itemsWord": "tools",
+    "catalogPrefix": "HV-",
+    "lookupHint": "Type it the way it reads on the tool label. Dashes and spaces don’t matter.",
+    "unitSearch": false
+  }
+}
